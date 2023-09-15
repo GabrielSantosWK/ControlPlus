@@ -1,0 +1,29 @@
+inherited ViewFrameLancamento: TViewFrameLancamento
+  Size.Width = 816.000000000000000000
+  Size.Height = 420.000000000000000000
+  object VertScrollBox1: TVertScrollBox
+    Align = Bottom
+    Position.Y = 176.000000000000000000
+    Size.Width = 816.000000000000000000
+    Size.Height = 244.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 816.000000000000000000
+    Viewport.Height = 244.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 336.000000000000000000
+    Position.Y = 80.000000000000000000
+    TabOrder = 1
+    Text = 'Button1'
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Position.X = -184.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 5
+      Viewport.Width = 46.000000000000000000
+      Viewport.Height = 46.000000000000000000
+    end
+  end
+end

@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 546
+  ClientWidth = 734
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object recNav: TRectangle
+    Align = Left
+    Size.Width = 129.000000000000000000
+    Size.Height = 546.000000000000000000
+    Size.PlatformDefault = False
+    object Layout1: TLayout
+      Align = Top
+      Size.Width = 129.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object Rectangle3: TRectangle
+    Align = Client
+    Size.Width = 605.000000000000000000
+    Size.Height = 546.000000000000000000
+    Size.PlatformDefault = False
+    object recTop: TRectangle
+      Align = Top
+      Size.Width = 605.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      object Label1: TLabel
+        Align = Center
+        StyledSettings = [Family]
+        HitTest = True
+        Size.Width = 262.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claSlategray
+        TextSettings.HorzAlign = Center
+        Text = 'Ger'#234'nciamento de Contas'
+        TabOrder = 0
+        OnClick = Label1Click
+      end
+    end
+    object Button1: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 162.000000000000000000
+      TabOrder = 1
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 8.000000000000000000
+      Position.Y = 58.000000000000000000
+      Size.Width = 321.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Button2: TButton
+      Position.X = 171.000000000000000000
+      Position.Y = 344.000000000000000000
+      TabOrder = 2
+      Text = 'Button2'
+      OnClick = Button2Click
+    end
+  end
+end

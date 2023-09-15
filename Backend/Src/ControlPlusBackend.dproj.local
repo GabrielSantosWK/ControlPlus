@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/06/25 10:52:01.000.934,=C:\Users\Negue\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/10 19:51:15.000.932,=C:\Users\Negue\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/05/15 19:38:26.000.925,=C:\Users\Negue\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/05 12:43:11.000.223,=C:\Users\Negue\OneDrive\Documentos\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2023/07/05 12:43:12.000.591,=C:\Users\Negue\OneDrive\Documentos\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/09/14 01:02:35.000.954,C:\Projetos\ControlPlusBackend\Src\ControlPlusBackend.dproj=C:\Users\Negue\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/09/14 01:08:40.000.636,=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 01:09:05.000.418,C:\Projetos\ControlPlusBackend\Src\Model\Connection\Model.Connection.dfm=C:\Projetos\ControlPlusBackend\Src\Unit1.dfm</Transaction>
+    <Transaction>2023/09/14 01:09:05.000.418,C:\Projetos\ControlPlusBackend\Src\Model\Connection\Model.Connection.pas=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 08:59:27.000.024,=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 09:00:40.000.290,=C:\Projetos\ControlPlus\Src\Entity\Entity.Base.pas</Transaction>
+    <Transaction>2023/09/14 09:00:40.000.344,=C:\Projetos\ControlPlus\Src\Entity\Entity.Lancamentos.pas</Transaction>
+    <Transaction>2023/09/14 09:01:01.000.474,=C:\Projetos\ControlPlus\Src\RTTI\Model.RTTI.Attributes.pas</Transaction>
+    <Transaction>2023/09/14 09:01:01.000.545,=C:\Projetos\ControlPlus\Src\RTTI\Model.RTTI.Bind.pas</Transaction>
+    <Transaction>2023/09/14 09:45:07.000.455,=C:\Projetos\ControlPlus\Src\Model\DAO\Model.DAO.Lancamentos.pas</Transaction>
+    <Transaction>2023/09/14 09:45:07.000.383,=C:\Projetos\ControlPlus\Src\Model\DAO\Model.DAO.Base.pas</Transaction>
+    <Transaction>2023/09/14 09:49:59.000.161,=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 09:50:25.000.173,C:\Projetos\ControlPlusBackend\Src\Controller\Controller.Lancamento.pas=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 14:30:13.000.412,=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 14:30:52.000.254,C:\Projetos\ControlPlus\Src\Entity\Entity.Cartoes.pas=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 20:35:49.000.062,=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 20:36:00.000.501,C:\Projetos\ControlPlusBackend\Src\Unit1.pas=C:\Projetos\ControlPlusBackend\Src\Controller\Controller.Cartoes.pas</Transaction>
+    <Transaction>2023/09/14 20:36:28.000.294,=C:\Projetos\ControlPlusBackend\Src\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 20:36:44.000.966,C:\Projetos\ControlPlusBackend\Src\Unit1.pas=C:\Projetos\ControlPlus\Src\Model\DAO\Model.DAO.Cartoes.pas</Transaction>
+    <Transaction>2023/09/14 20:51:52.692,=C:\Projetos\ControlPlus\Comuns\Entity\Entity.Base.pas</Transaction>
+    <Transaction>2023/09/14 20:51:52.737,=C:\Projetos\ControlPlus\Comuns\Entity\Entity.Cartoes.pas</Transaction>
+    <Transaction>2023/09/14 20:51:52.776,=C:\Projetos\ControlPlus\Comuns\Entity\Entity.Lancamentos.pas</Transaction>
+    <Transaction>2023/09/14 20:52:06.060,=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Base.pas</Transaction>
+    <Transaction>2023/09/14 20:52:06.088,=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Cartoes.pas</Transaction>
+    <Transaction>2023/09/14 20:52:06.117,=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Lancamentos.pas</Transaction>
+    <Transaction>2023/09/14 20:52:31.017,=C:\Projetos\ControlPlus\Comuns\RTTI\Model.RTTI.Attributes.pas</Transaction>
+    <Transaction>2023/09/14 20:52:31.067,=C:\Projetos\ControlPlus\Comuns\RTTI\Model.RTTI.Bind.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="cf0d5e7" Android="cf0d5e7"/>
+	</ActiveMobileDevice>
+</BorlandProject>

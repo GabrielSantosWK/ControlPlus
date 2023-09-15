@@ -1,0 +1,5 @@
+object ViewFrameBase: TViewFrameBase
+  Size.Width = 696.000000000000000000
+  Size.Height = 588.000000000000000000
+  Size.PlatformDefault = False
+end
