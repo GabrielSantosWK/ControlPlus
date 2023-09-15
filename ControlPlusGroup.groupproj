@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{ED6A0E17-6FEA-4EDD-BBA3-7123495D2B93}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Backend\Src\ControlPlusBackend.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Desktop\Src\ControlPlus.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ControlPlusBackend">
+        <MSBuild Projects="Backend\Src\ControlPlusBackend.dproj"/>
+    </Target>
+    <Target Name="ControlPlusBackend:Clean">
+        <MSBuild Projects="Backend\Src\ControlPlusBackend.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ControlPlusBackend:Make">
+        <MSBuild Projects="Backend\Src\ControlPlusBackend.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ControlPlus">
+        <MSBuild Projects="Desktop\Src\ControlPlus.dproj"/>
+    </Target>
+    <Target Name="ControlPlus:Clean">
+        <MSBuild Projects="Desktop\Src\ControlPlus.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ControlPlus:Make">
+        <MSBuild Projects="Desktop\Src\ControlPlus.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ControlPlusBackend;ControlPlus"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ControlPlusBackend:Clean;ControlPlus:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ControlPlusBackend:Make;ControlPlus:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

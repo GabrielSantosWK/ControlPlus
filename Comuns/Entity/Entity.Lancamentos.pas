@@ -17,6 +17,7 @@ uses
     FDataLancamento: TDate;
     FIdDependente: string;
     FCartao: TEntityCartoes;
+    FDescricao: string;
     procedure SetDataLancamento(const Value: TDate);
     procedure SetDataVencimento(const Value: TDate);
     procedure SetId(const Value: string);
@@ -25,6 +26,7 @@ uses
     procedure SetIdOperacao(const Value: string);
     procedure SetValor(const Value: Currency);
     procedure SetCartao(const Value: TEntityCartoes);
+    procedure SetDescricao(const Value: string);
   public
 
   constructor Create();
@@ -36,6 +38,12 @@ uses
   [Pk]
   property Id:string read FId write SetId;
 
+  [FieldDB('descricao')]
+  [FieldJSON('descricao')]
+  [TypeField(tpFieldString)]
+  property Descricao:string read FDescricao write SetDescricao;
+
+
   [FieldDB('Id_Cartao')]
   [FieldJSON('IdCartao')]
   [TypeField(tpFieldString)]
@@ -44,7 +52,6 @@ uses
   [TypeField(tpFieldObject)]
   [FK('cartoes','Id_Cartao')]
   property Cartao:TEntityCartoes read FCartao write SetCartao;
-
 
   [FieldDB('Id_Dependente')]
   [FieldJSON('IdDependente')]
@@ -101,6 +108,11 @@ end;
 procedure TEntityLancamentos.SetDataVencimento(const Value: TDate);
 begin
   FDataVencimento := Value;
+end;
+
+procedure TEntityLancamentos.SetDescricao(const Value: string);
+begin
+  FDescricao := Value;
 end;
 
 procedure TEntityLancamentos.SetId(const Value: string);

@@ -9,13 +9,13 @@ uses
 type
   TViewFrameBase = class(TFrame)
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
 
 {$R *.fmx}
+
+{ TViewFrameBase }
 
 end.

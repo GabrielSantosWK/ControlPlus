@@ -1,4 +1,5 @@
 object ViewFrameBase: TViewFrameBase
+  Align = Contents
   Size.Width = 696.000000000000000000
   Size.Height = 588.000000000000000000
   Size.PlatformDefault = False

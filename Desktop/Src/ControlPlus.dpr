@@ -17,7 +17,12 @@ uses
   Model.DAO.Cartoes in '..\..\Comuns\Model\DAO\Model.DAO.Cartoes.pas',
   Model.DAO.Lancamentos in '..\..\Comuns\Model\DAO\Model.DAO.Lancamentos.pas',
   Model.RTTI.Attributes in '..\..\Comuns\RTTI\Model.RTTI.Attributes.pas',
-  Model.RTTI.Bind in '..\..\Comuns\RTTI\Model.RTTI.Bind.pas';
+  Model.RTTI.Bind in '..\..\Comuns\RTTI\Model.RTTI.Bind.pas',
+  View.Frame.Lancamentos.Item in 'View\Frame\Lancamentos\View.Frame.Lancamentos.Item.pas' {ViewFrameLancamentosItem: TFrame},
+  Helper.Scroll in 'Model\Helper\Helper.Scroll.pas',
+  View.Teste.Layout in 'View\View.Teste.Layout.pas' {Form2},
+  Entity.Dependentes in '..\..\Comuns\Entity\Entity.Dependentes.pas',
+  Model.DAO.Dependentes in '..\..\Comuns\Model\DAO\Model.DAO.Dependentes.pas';
 
 {$R *.res}
 
@@ -25,5 +30,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TModelConnection, ModelConnection);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
