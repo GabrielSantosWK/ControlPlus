@@ -159,9 +159,6 @@ var
   LJSONArray:TJSONArray;
   I: Integer;
   LJSONRequest:string;
-  LRequest: THTTPClient;
-  LFormData: TMultipartFormData;
-  LResponse: TStringStream;
 begin
   if not TModelConnectionNet.CheckInternet then
     raise Exception.Create('Dispositivo sem acesso a internet');

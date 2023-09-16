@@ -3,6 +3,7 @@ unit Model.DAO.Base;
 interface
 
 uses
+  System.Classes,
   Model.RTTI.Bind,
   Model.Connection,
   System.JSON,
@@ -19,14 +20,14 @@ uses
   FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, Entity.Base;
 
 type
   TModelDAOBase<T: Class> = class
   private
     FRecordCountItemsQuery:Integer;
     FEntity: T;
-    FList: TList<T>;
+    FList: TObjectList<T>;
     FModelConnection:TModelConnection;
     FLastID:string;
     procedure SetEntity(const Value: T);
@@ -40,7 +41,7 @@ type
     function Update():Boolean;
     procedure Delete();overload;
     procedure Delete(AFilter:string);overload;
-    function Get(): TModelDAOBase<T>;overload;
+    function Get(const InUseList:Boolean = False): TModelDAOBase<T>;overload;
     function Get(AFilter:string): TModelDAOBase<T>;overload;
     function Get(AFirst,ASkip:Integer;AFilter:string): TModelDAOBase<T>;overload;
     function Get(AFirst,ASkip:Integer): TModelDAOBase<T>;overload;
@@ -88,19 +89,29 @@ begin
   inherited;
 end;
 
-function TModelDAOBase<T>.Get: TModelDAOBase<T>;
+function TModelDAOBase<T>.Get(const InUseList:Boolean): TModelDAOBase<T>;
 begin
   Result := Self;
   FQuery.SQL.Clear;
   FQuery.SQL.Add(TModelRTTIBind.GetInstance.ClassToSelectAllSQL(Entity));
   FQuery.Open();
+  if InUseList then
+  begin
+    FList.Clear;
+    FQuery.First;
+    while not (FQuery.eof) do
+    begin
+      var LEntity := TClass(T).Create;
+      TEntityBase(LEntity).DataSetToClass(FQuery);
+      FList.Add(LEntity);
+      FQuery.Next;
+    end;
+  end;
 end;
 
 function TModelDAOBase<T>.List: TObjectList<T>;
-var
-  LClass: TModelDAOBase<T>;
 begin
-  LClass := TModelDAOBase<T>.Create;
+  Result := FList;
 end;
 
 function TModelDAOBase<T>.ListDataSet: TDataSet;

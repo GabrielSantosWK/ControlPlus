@@ -1,7 +1,7 @@
 unit Helper.Scroll;
 
 interface
-uses FMX.Layouts;
+uses FMX.Layouts,FMX.Types;
 type
   TScrollHelper = class helper for TCustomScrollBox
     procedure ClearItems();

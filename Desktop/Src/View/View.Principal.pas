@@ -9,7 +9,7 @@ uses
   Model.DAO.Lancamentos, View.Frame.Lancamentos;
 
 type
-  TForm1 = class(TForm)
+  TViewPrincipal = class(TForm)
     recNav: TRectangle;
     recTop: TRectangle;
     Rectangle3: TRectangle;
@@ -26,20 +26,20 @@ type
   end;
 
 var
-  Form1: TForm1;
+  ViewPrincipal: TViewPrincipal;
 
 implementation
 
 {$R *.fmx}
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TViewPrincipal.Button3Click(Sender: TObject);
 begin
   var LViewFramento := TViewFrameLancamento.Create(layContent);
   LViewFramento.Parent := layContent;
   //LViewFramento.Align := TAlignLayout.Contents;
 end;
 
-procedure TForm1.Label1Click(Sender: TObject);
+procedure TViewPrincipal.Label1Click(Sender: TObject);
 begin
   if recNav.Margins.Left = 0 then
     TAnimator.AnimateFloat(recNav,'Margins.Left',-130,0.2)

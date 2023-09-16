@@ -1,9 +1,10 @@
-object Form1: TForm1
+object ViewPrincipal: TViewPrincipal
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Control Plus'
   ClientHeight = 546
   ClientWidth = 734
+  WindowState = wsMaximized
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]

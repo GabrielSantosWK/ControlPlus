@@ -47,7 +47,7 @@ interface
     {ListBase}
     function ClassToListFields(AClass:TClass):TDictionary<String,Integer>;
     {SQL}
-    procedure DataSetToClass(ADataSet:TDataSet;out AClass:TClass);
+    procedure DataSetToClass(ADataSet:TDataSet; AClass:TObject);
     function ClassToSelectAllSQL(AClass:TObject):String;overload;
     function ClassToSelectAllSQL(AClass:TObject;AFilter:string):String;overload;
     function ClassToSelectPaginationSQL(AClass: TObject;AFirst,ASkip:Integer): String;overload;
@@ -1310,7 +1310,7 @@ begin
   Result := Format(SQL,[LPK,LTable]);
 end;
 
-procedure TModelRTTIBind.DataSetToClass(ADataSet:TDataSet;out AClass:TClass);
+procedure TModelRTTIBind.DataSetToClass(ADataSet:TDataSet; AClass:TObject);
 var
   LContext:TRttiContext;
   LType:TRttiType;
@@ -1340,7 +1340,7 @@ begin
       begin
         if LAttributes is FieldDB then
         begin
-          if FieldDB(LAttributes).FieldDB.IsEmpty then
+          if not FieldDB(LAttributes).FieldDB.IsEmpty then
             LFileValue.Name := FieldDB(LAttributes).FieldDB;
           LIsFieldDB := True;
           Break;
@@ -1359,7 +1359,7 @@ begin
         end;
       end;
 
-      if not LIsFieldDB then
+      if LIsFieldDB then
       begin
         for LAttributes in LProperties.GetAttributes do
         begin
@@ -1377,8 +1377,6 @@ begin
               else
                 raise Exception.Create('TpField não informado');
             end;
-
-
           end;
         end;
       end;

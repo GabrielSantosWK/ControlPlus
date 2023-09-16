@@ -36,10 +36,6 @@ begin
 end;
 
 class function TModelConnectionNet.GetWindows: Boolean;
-{$IFDEF MSWINDOWS}
-var
-  Internet:DWORD;
-{$ENDIF}
 begin
 {$IFDEF MSWINDOWS}
   Result := False;
@@ -54,7 +50,6 @@ begin
   except on E: Exception do
     Result := False;
   end;
-  //Result :=  InternetGetConnectedState(@Internet,0);
 {$ENDIF}
 end;
 
