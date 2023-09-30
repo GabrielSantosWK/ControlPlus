@@ -6,7 +6,7 @@ uses
   System.SysUtils,
   Model.RTTI.Attributes;
   type
-  [Table('lancamentos_operacoes')]
+  [Table('lancamentos_operacaoes')]
   TEntityoperacoes = class(TEntityBase)
   private
     FDescricao: string;

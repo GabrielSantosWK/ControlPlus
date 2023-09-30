@@ -1,63 +1,91 @@
 inherited ViewFrameLancamento: TViewFrameLancamento
-  Size.Width = 754.000000000000000000
-  Size.Height = 401.000000000000000000
+  Size.Width = 752.000000000000000000
+  Size.Height = 540.000000000000000000
+  inherited recFrameBase: TRectangle
+    Size.Width = 752.000000000000000000
+    Size.Height = 540.000000000000000000
+  end
   object VertScrollBox: TVertScrollBox
     Align = Client
-    Size.Width = 754.000000000000000000
-    Size.Height = 176.000000000000000000
+    Size.Width = 752.000000000000000000
+    Size.Height = 315.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    Viewport.Width = 754.000000000000000000
-    Viewport.Height = 176.000000000000000000
+    Viewport.Width = 752.000000000000000000
+    Viewport.Height = 315.000000000000000000
   end
   object layControls: TLayout
     Align = MostTop
-    Size.Width = 754.000000000000000000
+    Size.Width = 752.000000000000000000
     Size.Height = 225.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    object Button1: TButton
-      Position.X = 608.000000000000000000
-      Position.Y = 132.000000000000000000
-      TabOrder = 1
-      Text = 'Button1'
-      OnClick = Button1Click
-    end
     object Layout1: TLayout
       Align = Bottom
+      Padding.Left = 5.000000000000000000
+      Padding.Top = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Padding.Bottom = 5.000000000000000000
       Position.Y = 175.000000000000000000
-      Size.Width = 754.000000000000000000
+      Size.Width = 752.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 2
-      object Button2: TButton
+      TabOrder = 0
+      object Rectangle1: TRectangle
         Align = Left
-        Size.Width = 201.000000000000000000
-        Size.Height = 50.000000000000000000
+        Fill.Color = xFF65B8E4
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 0
-        Text = 'Buscar'
-        OnClick = Button2Click
+        Stroke.Kind = None
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        OnClick = Rectangle1Click
+        object Label7: TLabel
+          Align = Contents
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 177.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'BUSCAR'
+          TabOrder = 0
+        end
       end
-      object Button3: TButton
+      object Rectangle4: TRectangle
         Align = Left
-        Position.X = 201.000000000000000000
-        Size.Width = 232.000000000000000000
-        Size.Height = 50.000000000000000000
+        Fill.Color = xFF65B8E4
+        Margins.Left = 10.000000000000000000
+        Position.X = 192.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 1
-        Text = 'Button1'
-        OnClick = Button1Click
+        Stroke.Kind = None
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        OnClick = Rectangle4Click
+        object Label5: TLabel
+          Align = Contents
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 177.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'SALVAR'
+          TabOrder = 0
+        end
       end
-    end
-    object edtDescricao: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 3
-      Position.X = 16.000000000000000000
-      Position.Y = 40.000000000000000000
-      Size.Width = 241.000000000000000000
-      Size.Height = 22.000000000000000000
-      Size.PlatformDefault = False
     end
     object ComboBox1: TComboBox
       Items.Strings = (
@@ -70,7 +98,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'comboboxstyle'
-      TabOrder = 4
+      TabOrder = 1
     end
     object cbCartao: TComboBox
       Position.X = 372.000000000000000000
@@ -78,7 +106,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
       Size.Width = 153.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 7
+      TabOrder = 3
     end
     object cbDependente: TComboBox
       Position.X = 544.000000000000000000
@@ -86,62 +114,230 @@ inherited ViewFrameLancamento: TViewFrameLancamento
       Size.Width = 153.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 6
-    end
-    object Label1: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 15.000000000000000000
-      Text = 'Descri'#231#227'o'
-      TabOrder = 14
+      TabOrder = 2
     end
     object Label2: TLabel
       Position.X = 272.000000000000000000
       Position.Y = 15.000000000000000000
       Text = 'Opera'#231#227'o'
-      TabOrder = 13
+      TabOrder = 6
     end
     object Label3: TLabel
       Position.X = 372.000000000000000000
       Position.Y = 15.000000000000000000
       Text = 'Cart'#227'o'
-      TabOrder = 9
+      TabOrder = 5
     end
     object Label4: TLabel
       Position.X = 544.000000000000000000
       Position.Y = 15.000000000000000000
       Text = 'Dependente'
-      TabOrder = 8
+      TabOrder = 4
     end
-    object edtValor: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 5
-      Position.X = 16.000000000000000000
-      Position.Y = 104.000000000000000000
-      Size.Width = 65.000000000000000000
-      Size.Height = 22.000000000000000000
+    object Layout2: TLayout
+      Position.X = 8.000000000000000000
+      Position.Y = 21.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
-      OnKeyUp = edtValorKeyUp
-    end
-    object Label5: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 79.000000000000000000
-      Text = 'Valor'
-      TabOrder = 12
-    end
-    object Label6: TLabel
-      Position.X = 265.000000000000000000
-      Position.Y = 79.000000000000000000
-      Text = 'Data Vencimento'
       TabOrder = 11
+      object Rectangle2: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Locked = True
+        Padding.Left = 4.000000000000000000
+        Padding.Top = 4.000000000000000000
+        Padding.Right = 4.000000000000000000
+        Padding.Bottom = 4.000000000000000000
+        Margins.Left = 4.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 29.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFB0B0B0
+        XRadius = 6.000000000000000000
+        YRadius = 6.000000000000000000
+        object edtDescricao: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          StyleLookup = 'transparentedit'
+          TabOrder = 2
+          TextSettings.FontColor = xFF3F3F3F
+          Locked = True
+          Size.Width = 201.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Mercado do jos'#233'...'
+          StyledSettings = [Family, Size, Style]
+        end
+        object ShadowEffect1: TShadowEffect
+          Distance = 4.000000000000000000
+          Direction = 70.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = xFF585858
+        end
+      end
+      object Label1: TLabel
+        Align = Top
+        StyledSettings = [Family, Size]
+        Locked = True
+        Margins.Left = 4.000000000000000000
+        Position.X = 4.000000000000000000
+        Size.Width = 213.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TextSettings.FontColor = xFF4E4E4E
+        Text = 'Descri'#231#227'o'
+        TabOrder = 12
+      end
+    end
+    object Layout3: TLayout
+      Position.X = 8.000000000000000000
+      Position.Y = 81.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      object Rectangle3: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Locked = True
+        Padding.Left = 4.000000000000000000
+        Padding.Top = 4.000000000000000000
+        Padding.Right = 4.000000000000000000
+        Padding.Bottom = 4.000000000000000000
+        Margins.Left = 4.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 29.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFB0B0B0
+        XRadius = 6.000000000000000000
+        YRadius = 6.000000000000000000
+        object edtValor: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          StyleLookup = 'transparentedit'
+          TabOrder = 2
+          TextSettings.FontColor = xFF3F3F3F
+          Locked = True
+          Size.Width = 201.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'R$ 0,00'
+          StyledSettings = [Family, Size, Style]
+          OnKeyUp = edtValorKeyUp
+        end
+        object ShadowEffect2: TShadowEffect
+          Distance = 4.000000000000000000
+          Direction = 70.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = xFF585858
+        end
+      end
+      object Label8: TLabel
+        Align = Top
+        StyledSettings = [Family, Size]
+        Locked = True
+        Margins.Left = 4.000000000000000000
+        Position.X = 4.000000000000000000
+        Size.Width = 213.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TextSettings.FontColor = xFF4E4E4E
+        Text = 'Valor'
+        TabOrder = 12
+      end
+    end
+    object chbGerarPeriodo: TCheckBox
+      IsChecked = True
+      Position.X = 520.000000000000000000
+      Position.Y = 87.000000000000000000
+      TabOrder = 12
+      Text = 'Gerar por periodo'
+    end
+    object Label9: TLabel
+      Position.X = 273.000000000000000000
+      Position.Y = 87.000000000000000000
+      Text = 'Data Vencimento'
+      TabOrder = 7
     end
     object edtDataVencimento: TDateEdit
       Date = 45184.000000000000000000
-      Position.X = 265.000000000000000000
-      Position.Y = 104.000000000000000000
+      Position.X = 273.000000000000000000
+      Position.Y = 112.000000000000000000
       Size.Width = 127.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 16
+      StyleLookup = 'dateeditstyle'
+      TabOrder = 8
+    end
+    object Layout4: TLayout
+      Position.X = 520.000000000000000000
+      Position.Y = 114.000000000000000000
+      Size.Width = 209.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      object Rectangle5: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Locked = True
+        Padding.Left = 4.000000000000000000
+        Padding.Top = 4.000000000000000000
+        Padding.Right = 4.000000000000000000
+        Padding.Bottom = 4.000000000000000000
+        Margins.Left = 4.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 201.000000000000000000
+        Size.Height = 29.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFB0B0B0
+        XRadius = 6.000000000000000000
+        YRadius = 6.000000000000000000
+        object edtQuantidadeMeses: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          StyleLookup = 'transparentedit'
+          TabOrder = 2
+          Text = '10'
+          TextSettings.FontColor = xFF3F3F3F
+          Locked = True
+          Size.Width = 193.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Quantos messes deseja gerar'
+          StyledSettings = [Family, Size, Style]
+        end
+        object ShadowEffect3: TShadowEffect
+          Distance = 4.000000000000000000
+          Direction = 70.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = xFF585858
+        end
+      end
+      object Label6: TLabel
+        Align = Top
+        StyledSettings = [Family, Size]
+        Locked = True
+        Margins.Left = 4.000000000000000000
+        Position.X = 4.000000000000000000
+        Size.Width = 205.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TextSettings.FontColor = xFF4E4E4E
+        Text = 'Quantos Meses'
+        TabOrder = 12
+      end
     end
   end
 end

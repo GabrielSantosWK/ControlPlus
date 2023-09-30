@@ -29,12 +29,19 @@ uses
   Model.Static.Dependentes in 'Model\Static\Model.Static.Dependentes.pas',
   Model.Static.Operacoes in 'Model\Static\Model.Static.Operacoes.pas',
   Entity.Operacoes in '..\..\Comuns\Entity\Entity.Operacoes.pas',
-  Model.DAO.Operacoes in '..\..\Comuns\Model\DAO\Model.DAO.Operacoes.pas';
+  Model.DAO.Operacoes in '..\..\Comuns\Model\DAO\Model.DAO.Operacoes.pas',
+  View.Frame.Compra.Cartao in 'View\Frame\CompraCartao\View.Frame.Compra.Cartao.pas' {ViewFrameCompraCartao: TFrame},
+  View.Componentes.ComboBox in 'View\Componentes\ComboBox\View.Componentes.ComboBox.pas' {ViewComponenteComboBox: TFrame},
+  View.Componentes.ComboBox.List.Items in 'View\Componentes\ComboBox\View.Componentes.ComboBox.List.Items.pas' {ViewComponentesComboBoxListItems: TFrame},
+  View.Componentes.ComboBox.Items in 'View\Componentes\ComboBox\View.Componentes.ComboBox.Items.pas' {ViewComponentesComboBoxItems: TFrame},
+  View.Componentes.Toggle in 'View\Componentes\Toggle\View.Componentes.Toggle.pas' {Frame1: TFrame},
+  View.Frame.Compra.Cartao.Item in 'View\Frame\CompraCartao\View.Frame.Compra.Cartao.Item.pas' {ViewFrameCompraCartaoItem: TFrame};
 
 {$R *.res}
 
 begin
   Application.Initialize;
+  ReportMemoryLeaksOnShutdown := True;
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
   Application.CreateForm(TModelConnection, ModelConnection);
   Application.CreateForm(TForm2, Form2);

@@ -14,6 +14,7 @@ type
   private
     FNome: string;
     FId: string;
+    FVencimento: Integer;
     procedure SetNome(const Value: string);
     procedure SetId(const Value: string);
 

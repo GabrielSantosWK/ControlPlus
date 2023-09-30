@@ -2,20 +2,25 @@ unit Model.Static.Cartoes;
 
 interface
 
-uses Entity.Cartoes, Model.DAO.Cartoes;
+uses
+  System.Generics.Collections,
+  Entity.Cartoes,
+  Model.DAO.Cartoes;
 
 type
   TModelStaticCartoes = class
   private
     class var FInstance: TModelStaticCartoes;
-    var
-    FModelDaoCartoes:TModelDAOCartoes;
-  public
-    class function GetInstance: TModelStaticCartoes;
+
+  var
+    FModelDaoCartoes: TModelDAOCartoes;
+    FList: TList<TEntityCartoes>;
+    public class function GetInstance: TModelStaticCartoes;
     constructor Create();
-    destructor Destroy();override;
+    destructor Destroy(); override;
     procedure Refresh;
-    function Find(const AID:string):TEntityCartoes;
+    function Find(const AID: string): TEntityCartoes;
+    function List: TList<TEntityCartoes>;
   end;
 
 implementation
@@ -25,12 +30,14 @@ implementation
 constructor TModelStaticCartoes.Create;
 begin
   FModelDaoCartoes := TModelDAOCartoes.Create;
+  FList := TList<TEntityCartoes>.Create;
   Refresh;
 end;
 
 destructor TModelStaticCartoes.Destroy;
 begin
   FModelDaoCartoes.Free;
+  FList.Free;
   inherited;
 end;
 
@@ -52,6 +59,11 @@ begin
   if not Assigned(FInstance) then
     FInstance := TModelStaticCartoes.Create;
   Result := FInstance;
+end;
+
+function TModelStaticCartoes.List: TList<TEntityCartoes>;
+begin
+  Result := FModelDaoCartoes.List;
 end;
 
 procedure TModelStaticCartoes.Refresh;

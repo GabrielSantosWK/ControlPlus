@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Edit, FMX.Layouts, FMX.Objects,FMX.Ani,
-  Model.DAO.Lancamentos, View.Frame.Lancamentos;
+  Model.DAO.Lancamentos, View.Frame.Lancamentos, View.Frame.Compra.Cartao;
 
 type
   TViewPrincipal = class(TForm)
@@ -17,7 +17,9 @@ type
     Label1: TLabel;
     Button3: TButton;
     layContent: TLayout;
+    Button1: TButton;
     procedure Label1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
@@ -32,11 +34,19 @@ implementation
 
 {$R *.fmx}
 
-procedure TViewPrincipal.Button3Click(Sender: TObject);
+procedure TViewPrincipal.Button1Click(Sender: TObject);
 begin
   var LViewFramento := TViewFrameLancamento.Create(layContent);
   LViewFramento.Parent := layContent;
   //LViewFramento.Align := TAlignLayout.Contents;
+
+end;
+
+procedure TViewPrincipal.Button3Click(Sender: TObject);
+begin
+  var LViewFrameCartao := TViewFrameCompraCartao.Create(layContent);
+  LViewFrameCartao.Parent := layContent;
+  LViewFrameCartao.SetComboBoxListItem(LViewFrameCartao.ViewComponentesComboBoxListItems1);
 end;
 
 procedure TViewPrincipal.Label1Click(Sender: TObject);

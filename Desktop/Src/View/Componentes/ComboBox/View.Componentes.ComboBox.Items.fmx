@@ -1,0 +1,43 @@
+object ViewComponentesComboBoxItems: TViewComponentesComboBoxItems
+  Size.Width = 472.000000000000000000
+  Size.Height = 40.000000000000000000
+  Size.PlatformDefault = False
+  OnClick = FrameClick
+  object Rectangle3: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Locked = True
+    HitTest = False
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Margins.Left = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Size.Width = 464.000000000000000000
+    Size.Height = 36.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFFB0B0B0
+    XRadius = 6.000000000000000000
+    YRadius = 6.000000000000000000
+    object Circle1: TCircle
+      Align = Left
+      Locked = True
+      Position.X = 4.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lblDescricao: TLabel
+      Align = Client
+      Locked = True
+      Size.Width = 406.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblDescricao'
+      TabOrder = 4
+    end
+  end
+end

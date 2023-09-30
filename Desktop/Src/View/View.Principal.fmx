@@ -2,8 +2,8 @@ object ViewPrincipal: TViewPrincipal
   Left = 0
   Top = 0
   Caption = 'Control Plus'
-  ClientHeight = 546
-  ClientWidth = 734
+  ClientHeight = 544
+  ClientWidth = 736
   WindowState = wsMaximized
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -12,7 +12,7 @@ object ViewPrincipal: TViewPrincipal
   object recNav: TRectangle
     Align = Left
     Size.Width = 129.000000000000000000
-    Size.Height = 546.000000000000000000
+    Size.Height = 544.000000000000000000
     Size.PlatformDefault = False
     object Layout1: TLayout
       Align = Top
@@ -23,23 +23,33 @@ object ViewPrincipal: TViewPrincipal
     end
     object Button3: TButton
       Align = Top
+      Position.Y = 89.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Lancamentos Cart'#227'o'
+      OnClick = Button3Click
+    end
+    object Button1: TButton
+      Align = Top
       Position.Y = 50.000000000000000000
       Size.Width = 129.000000000000000000
       Size.Height = 39.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Lancamentos'
-      OnClick = Button3Click
+      OnClick = Button1Click
     end
   end
   object Rectangle3: TRectangle
     Align = Client
-    Size.Width = 605.000000000000000000
-    Size.Height = 546.000000000000000000
+    Size.Width = 607.000000000000000000
+    Size.Height = 544.000000000000000000
     Size.PlatformDefault = False
     object recTop: TRectangle
       Align = Top
-      Size.Width = 605.000000000000000000
+      Size.Width = 607.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       object Label1: TLabel
@@ -60,8 +70,8 @@ object ViewPrincipal: TViewPrincipal
     end
     object layContent: TLayout
       Align = Client
-      Size.Width = 605.000000000000000000
-      Size.Height = 496.000000000000000000
+      Size.Width = 607.000000000000000000
+      Size.Height = 494.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
     end

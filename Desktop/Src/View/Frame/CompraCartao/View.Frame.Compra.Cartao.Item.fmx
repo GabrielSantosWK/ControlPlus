@@ -1,0 +1,85 @@
+object ViewFrameCompraCartaoItem: TViewFrameCompraCartaoItem
+  Padding.Left = 4.000000000000000000
+  Padding.Right = 4.000000000000000000
+  Padding.Bottom = 6.000000000000000000
+  Size.Width = 721.000000000000000000
+  Size.Height = 43.000000000000000000
+  Size.PlatformDefault = False
+  object recBase: TRectangle
+    Align = Client
+    Fill.Color = xFFF8F8F8
+    Size.Width = 713.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFFC3C3C3
+    XRadius = 6.000000000000000000
+    YRadius = 6.000000000000000000
+    object Layout1: TLayout
+      Align = Right
+      Position.X = 486.000000000000000000
+      Size.Width = 227.000000000000000000
+      Size.Height = 37.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Circle1: TCircle
+        Align = Left
+        Fill.Color = xFF5ED26E
+        Margins.Top = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFDADADA
+      end
+      object lblValor: TLabel
+        Align = Client
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 10.000000000000000000
+        Size.Width = 167.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFF626262
+        Text = 'R$ 000,00'
+        TabOrder = 1
+      end
+    end
+    object lblDescricao: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, Style]
+      Margins.Left = 10.000000000000000000
+      Size.Width = 380.000000000000000000
+      Size.Height = 37.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = xFF626262
+      Text = 'DESCRI'#199#195'O'
+      TabOrder = 1
+    end
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+    object Layout2: TLayout
+      Align = Right
+      Position.X = 390.000000000000000000
+      Size.Width = 96.000000000000000000
+      Size.Height = 37.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object lblCartao: TLabel
+        Align = Top
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 96.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFF626262
+        TextSettings.HorzAlign = Center
+        Text = 'CAIXA'
+        TabOrder = 1
+      end
+    end
+  end
+end

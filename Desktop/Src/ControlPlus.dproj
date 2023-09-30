@@ -331,6 +331,36 @@
         <DCCReference Include="Model\Static\Model.Static.Operacoes.pas"/>
         <DCCReference Include="..\..\Comuns\Entity\Entity.Operacoes.pas"/>
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Operacoes.pas"/>
+        <DCCReference Include="View\Frame\CompraCartao\View.Frame.Compra.Cartao.pas">
+            <Form>ViewFrameCompraCartao</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="View\Componentes\ComboBox\View.Componentes.ComboBox.pas">
+            <Form>ViewComponenteComboBox</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="View\Componentes\ComboBox\View.Componentes.ComboBox.List.Items.pas">
+            <Form>ViewComponentesComboBoxListItems</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="View\Componentes\ComboBox\View.Componentes.ComboBox.Items.pas">
+            <Form>ViewComponentesComboBoxItems</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="View\Componentes\Toggle\View.Componentes.Toggle.pas">
+            <Form>Frame1</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="View\Frame\CompraCartao\View.Frame.Compra.Cartao.Item.pas">
+            <Form>ViewFrameCompraCartaoItem</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

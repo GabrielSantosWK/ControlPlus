@@ -2,7 +2,10 @@ unit Model.Static.Dependentes;
 
 interface
 
-uses Entity.Dependentes, Model.DAO.Dependentes;
+uses
+  System.Generics.Collections,
+  Entity.Dependentes,
+  Model.DAO.Dependentes;
 
 type
   TModelStaticDependentes = class
@@ -16,6 +19,7 @@ type
     destructor Destroy(); override;
     procedure Refresh;
     function Find(const AID: string): TEntityDependentes;
+    function List:TList<TEntityDependentes>;
   end;
 
 implementation
@@ -52,6 +56,11 @@ begin
   if not Assigned(FInstance) then
     FInstance := TModelStaticDependentes.Create;
   Result := FInstance;
+end;
+
+function TModelStaticDependentes.List: TList<TEntityDependentes>;
+begin
+  Result := FModelDaoDependentes.List;
 end;
 
 procedure TModelStaticDependentes.Refresh;
