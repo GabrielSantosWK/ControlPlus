@@ -67,6 +67,7 @@ begin
     LItem.Align := TAlignLayout.Top;
     LItem.Parent := VertScrollBox1;
     LItem.Descricao := LValueItemList;
+    LItem.Key := Key;
     LItem.OnChange := Self.OnChange;
     Inc(LCountName);
   end;

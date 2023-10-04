@@ -8,6 +8,7 @@ object ViewPrincipal: TViewPrincipal
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnClose = FormClose
   DesignerMasterStyle = 0
   object recNav: TRectangle
     Align = Left
@@ -27,7 +28,7 @@ object ViewPrincipal: TViewPrincipal
       Size.Width = 129.000000000000000000
       Size.Height = 39.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 2
+      TabOrder = 3
       Text = 'Lancamentos Cart'#227'o'
       OnClick = Button3Click
     end
@@ -40,6 +41,16 @@ object ViewPrincipal: TViewPrincipal
       TabOrder = 1
       Text = 'Lancamentos'
       OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Top
+      Position.Y = 128.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Lancamentos Cart'#227'o'
+      OnClick = Button2Click
     end
   end
   object Rectangle3: TRectangle

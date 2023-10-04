@@ -323,7 +323,24 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
       end
     end
   end
-  inline ViewComponentesComboBoxListItems1: TViewComponentesComboBoxListItems
+  inline ComboBoxListItemsCartao: TViewComponentesComboBoxListItems
+    Align = Contents
+    Size.Width = 567.000000000000000000
+    Size.Height = 551.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    inherited Rectangle1: TRectangle
+      Size.Width = 567.000000000000000000
+      Size.Height = 551.000000000000000000
+    end
+    inherited Rectangle3: TRectangle
+      inherited VertScrollBox1: TVertScrollBox
+        Viewport.Width = 420.000000000000000000
+        Viewport.Height = 280.000000000000000000
+      end
+    end
+  end
+  inline ComboBoxListItemsDependente: TViewComponentesComboBoxListItems
     Align = Contents
     Size.Width = 567.000000000000000000
     Size.Height = 551.000000000000000000

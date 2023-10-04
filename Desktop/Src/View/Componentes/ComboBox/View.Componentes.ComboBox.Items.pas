@@ -27,7 +27,7 @@ type
   public
     procedure AfterConstruction; override;
     property Indice: Integer read FIndice;
-    property Key:string read FKey;
+    property Key:string read FKey write FKey;
     property Descricao:string read FDescricao write SetDescricao;
     property OnChange:TProc<TObject> read FOnChange write SetOnChange;
   end;

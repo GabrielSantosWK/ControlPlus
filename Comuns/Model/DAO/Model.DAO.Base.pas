@@ -25,15 +25,15 @@ uses
 type
   TModelDAOBase<T: Class> = class
   private
-    FRecordCountItemsQuery:Integer;
+    FRecordCountItemsQuery: Integer;
     FEntity: T;
     FList: TObjectList<T>;
-    FModelConnection:TModelConnection;
-    FLastID:string;
-    procedure SetEntity(const Value: T);
-  public
-  var
+    FModelConnection: TModelConnection;
+    FLastID: string;
     FQuery: TFDQuery;
+    procedure SetEntity(const Value: T);
+
+  public
     constructor Create(); virtual;
     destructor Destroy(); override;
     property Entity: T read FEntity write SetEntity;

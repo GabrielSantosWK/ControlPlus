@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Edit, FMX.Layouts, FMX.Objects,FMX.Ani,
-  Model.DAO.Lancamentos, View.Frame.Lancamentos, View.Frame.Compra.Cartao;
+  Model.DAO.Lancamentos, View.Frame.Lancamentos, View.Frame.Compra.Cartao,
+  View.Frame.RelatorioCartao;
 
 type
   TViewPrincipal = class(TForm)
@@ -18,11 +19,14 @@ type
     Button3: TButton;
     layContent: TLayout;
     Button1: TButton;
+    Button2: TButton;
     procedure Label1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button2Click(Sender: TObject);
   private
-    { Private declarations }
+    procedure ClearMainPage;
   public
     { Public declarations }
   end;
@@ -36,17 +40,37 @@ implementation
 
 procedure TViewPrincipal.Button1Click(Sender: TObject);
 begin
+  ClearMainPage;
   var LViewFramento := TViewFrameLancamento.Create(layContent);
   LViewFramento.Parent := layContent;
-  //LViewFramento.Align := TAlignLayout.Contents;
+end;
 
+procedure TViewPrincipal.Button2Click(Sender: TObject);
+begin
+  ClearMainPage;
+  var LViewFrameRelatorioCartao := TViewFrameRelaorioCartao.Create(layContent);
+  LViewFrameRelatorioCartao.Parent := layContent;
 end;
 
 procedure TViewPrincipal.Button3Click(Sender: TObject);
 begin
+  ClearMainPage;
   var LViewFrameCartao := TViewFrameCompraCartao.Create(layContent);
   LViewFrameCartao.Parent := layContent;
-  LViewFrameCartao.SetComboBoxListItem(LViewFrameCartao.ViewComponentesComboBoxListItems1);
+end;
+
+procedure TViewPrincipal.ClearMainPage;
+begin
+  for var i := 0 to Pred(layContent.ControlsCount) do
+  begin
+    if layContent.Controls[i] is TFrame then
+      TFrame(layContent.Controls[i]).Free;
+  end;
+end;
+
+procedure TViewPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  ClearMainPage;
 end;
 
 procedure TViewPrincipal.Label1Click(Sender: TObject);

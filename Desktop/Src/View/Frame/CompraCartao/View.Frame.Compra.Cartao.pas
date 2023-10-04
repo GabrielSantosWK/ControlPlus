@@ -20,7 +20,7 @@ type
     Rectangle4: TRectangle;
     Label5: TLabel;
     ComboBoxCartao: TViewComponenteComboBox;
-    ViewComponentesComboBoxListItems1: TViewComponentesComboBoxListItems;
+    ComboBoxListItemsCartao: TViewComponentesComboBoxListItems;
     chbGerarPeriodo: TCheckBox;
     Layout3: TLayout;
     Rectangle3: TRectangle;
@@ -38,6 +38,7 @@ type
     ShadowEffect1: TShadowEffect;
     Label1: TLabel;
     ComboBoxDependente: TViewComponenteComboBox;
+    ComboBoxListItemsDependente: TViewComponentesComboBoxListItems;
     procedure chbGerarPeriodoClick(Sender: TObject);
     procedure Rectangle4Click(Sender: TObject);
     procedure edtValorKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
@@ -46,6 +47,7 @@ type
     FStaticCartao:TModelStaticCartoes;
     FStaticDependente:TModelStaticDependentes;
     procedure GravarVariosRegistros;
+    procedure SaveOneRegister;
     function GetDataDiaVencimento(const ADateVencCard:Integer):TDate;
   public
     procedure AfterConstruction; override;
@@ -70,8 +72,8 @@ begin
   FStaticCartao := TModelStaticCartoes.GetInstance;
   FStaticDependente := TModelStaticDependentes.GetInstance;
 
-  ComboBoxCartao.ListItem := ViewComponentesComboBoxListItems1;
-  ComboBoxDependente.ListItem := ViewComponentesComboBoxListItems1;
+  ComboBoxCartao.ListItem := ComboBoxListItemsCartao;
+  ComboBoxDependente.ListItem := ComboBoxListItemsDependente;
 
   ComboBoxCartao.Item.Clear;
   for var I := 0 to Pred(FStaticCartao.List.Count) do
@@ -132,7 +134,8 @@ begin
         LModelDAOLancamentos.Entity.IdCartao := ComboBoxCartao.Key;
         LModelDAOLancamentos.Entity.IdDependente := ComboBoxDependente.Key;
         LModelDAOLancamentos.Entity.DataLancamento := Now;
-        LModelDAOLancamentos.Entity.DataVencimento := StrToDate(FStaticCartao.Find(LModelDAOLancamentos.Entity.IdCartao).ToString+'/'+LMes.ToString+'/'+LAno.ToString);
+        var LDia := FStaticCartao.Find(LModelDAOLancamentos.Entity.IdCartao).Vencimento;
+        LModelDAOLancamentos.Entity.DataVencimento := StrToDate(LDia.ToString+'/'+LMes.ToString+'/'+LAno.ToString);
         LModelDAOLancamentos.Entity.Valor := edtValor.ToCurrency;
         LModelDAOLancamentos.Entity.IdOperacao := 'C1F82DF6-F460-46CF-A2B3-E3AE80D641D1';
         LModelDAOLancamentos.Insert;
@@ -154,6 +157,26 @@ begin
   inherited;
   if chbGerarPeriodo.IsChecked then
     GravarVariosRegistros
+  else
+    SaveOneRegister;
+end;
+
+procedure TViewFrameCompraCartao.SaveOneRegister;
+begin
+  var LModelDAOLancamentos := TModelDAOLancamentos.Create;
+  try
+    LModelDAOLancamentos.Entity.Descricao := edtDescricao.Text;
+    LModelDAOLancamentos.Entity.IdCartao := ComboBoxCartao.Key;
+    LModelDAOLancamentos.Entity.IdDependente := ComboBoxDependente.Key;
+    LModelDAOLancamentos.Entity.DataLancamento := Now;
+    var LDia := FStaticCartao.Find(LModelDAOLancamentos.Entity.IdCartao).Vencimento;
+    LModelDAOLancamentos.Entity.DataVencimento := GetDataDiaVencimento(LDia);
+    LModelDAOLancamentos.Entity.Valor := edtValor.ToCurrency;
+    LModelDAOLancamentos.Entity.IdOperacao := 'C1F82DF6-F460-46CF-A2B3-E3AE80D641D1';
+    LModelDAOLancamentos.Insert;
+  finally
+    LModelDAOLancamentos.Free;
+  end;
 end;
 
 end.

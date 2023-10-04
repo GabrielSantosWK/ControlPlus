@@ -260,6 +260,8 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
+        <DCC_MapFile>3</DCC_MapFile>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
@@ -361,6 +363,19 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
+        <DCCReference Include="View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.pas">
+            <Form>ViewFrameRelaorioCartao</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.Item.pas">
+            <Form>ViewFrameRelatorioCartaoItem</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

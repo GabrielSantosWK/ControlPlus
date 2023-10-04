@@ -1,0 +1,47 @@
+inherited ViewFrameRelaorioCartao: TViewFrameRelaorioCartao
+  inherited recFrameBase: TRectangle
+    object VertScrollBox1: TVertScrollBox
+      Align = Client
+      Size.Width = 696.000000000000000000
+      Size.Height = 353.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 696.000000000000000000
+      Viewport.Height = 353.000000000000000000
+    end
+    object Layout1: TLayout
+      Align = Bottom
+      Position.Y = 538.000000000000000000
+      Size.Width = 696.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+    object Layout2: TLayout
+      Align = Top
+      Size.Width = 696.000000000000000000
+      Size.Height = 185.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object edtDtInicial: TDateEdit
+        Date = 45201.000000000000000000
+        Position.X = 48.000000000000000000
+        Position.Y = 72.000000000000000000
+        TabOrder = 0
+      end
+      object edtDtFinal: TDateEdit
+        Date = 45201.000000000000000000
+        Position.X = 184.000000000000000000
+        Position.Y = 72.000000000000000000
+        TabOrder = 1
+      end
+      object Button1: TButton
+        Position.X = 68.000000000000000000
+        Position.Y = 120.000000000000000000
+        TabOrder = 2
+        Text = 'Button1'
+        OnClick = Button1Click
+      end
+    end
+  end
+end

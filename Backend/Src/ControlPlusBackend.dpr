@@ -7,6 +7,7 @@ program ControlPlusBackend;
 uses
   Horse,
   Horse.Jhonson,
+  Horse.Cors,
   System.SysUtils,
   Model.Connection in 'Model\Connection\Model.Connection.pas' {ModelConnection: TDataModule},
   Controller.Lancamento in 'Controller\Controller.Lancamento.pas',
@@ -22,6 +23,7 @@ uses
 
 begin
   THorse.Use(Jhonson());
+  THorse.Use(Cors);
 
   Controller.Lancamento.Registry;
   Controller.Cartoes.Registry;

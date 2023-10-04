@@ -1,6 +1,11 @@
 program ControlPlus;
 
 uses
+  madExcept,
+  madLinkDisAsm,
+  madListHardware,
+  madListProcesses,
+  madListModules,
   System.StartUpCopy,
   FMX.Forms,
   View.Principal in 'View\View.Principal.pas' {ViewPrincipal},
@@ -35,13 +40,18 @@ uses
   View.Componentes.ComboBox.List.Items in 'View\Componentes\ComboBox\View.Componentes.ComboBox.List.Items.pas' {ViewComponentesComboBoxListItems: TFrame},
   View.Componentes.ComboBox.Items in 'View\Componentes\ComboBox\View.Componentes.ComboBox.Items.pas' {ViewComponentesComboBoxItems: TFrame},
   View.Componentes.Toggle in 'View\Componentes\Toggle\View.Componentes.Toggle.pas' {Frame1: TFrame},
-  View.Frame.Compra.Cartao.Item in 'View\Frame\CompraCartao\View.Frame.Compra.Cartao.Item.pas' {ViewFrameCompraCartaoItem: TFrame};
+  View.Frame.Compra.Cartao.Item in 'View\Frame\CompraCartao\View.Frame.Compra.Cartao.Item.pas' {ViewFrameCompraCartaoItem: TFrame},
+  View.Frame.RelatorioCartao in 'View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.pas' {ViewFrameRelaorioCartao: TFrame},
+  View.Frame.RelatorioCartao.Item in 'View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.Item.pas' {ViewFrameRelatorioCartaoItem: TFrame},
+  Model.DAO.Filter in '..\..\Comuns\Model\DAO\Model.DAO.Filter.pas',
+  Model.DAO.Filter.Factory in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas',
+  Model.DAO.Filter.Between in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  ReportMemoryLeaksOnShutdown := True;
+  //ReportMemoryLeaksOnShutdown := True;
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
   Application.CreateForm(TModelConnection, ModelConnection);
   Application.CreateForm(TForm2, Form2);
