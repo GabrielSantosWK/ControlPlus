@@ -20,7 +20,7 @@ uses
   FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Entity.Base;
+  FireDAC.Comp.Client, Entity.Base, Model.DAO.Filter;
 
 type
   TModelDAOBase<T: Class> = class
@@ -31,6 +31,7 @@ type
     FModelConnection: TModelConnection;
     FLastID: string;
     FQuery: TFDQuery;
+    FFilter:TModelDAOFilter;
     procedure SetEntity(const Value: T);
 
   public
@@ -40,8 +41,10 @@ type
     function Insert():Boolean; virtual;
     function Update():Boolean;
     procedure Delete();overload;
+    function Filter:TModelDAOFilter;
     procedure Delete(AFilter:string);overload;
     function Get(const InUseList:Boolean = False): TModelDAOBase<T>;overload;
+    function Get(AFilter:TModelDAOFilter; const InUseList:Boolean = False): TModelDAOBase<T>;overload;
     function Get(AFilter:string): TModelDAOBase<T>;overload;
     function Get(AFirst,ASkip:Integer;AFilter:string): TModelDAOBase<T>;overload;
     function Get(AFirst,ASkip:Integer): TModelDAOBase<T>;overload;
@@ -65,6 +68,7 @@ begin
   FQuery := TFDQuery.Create(nil);
   FQuery.Connection := FModelConnection.FDConnection;
   FList := TObjectList<T>.Create;
+  FFilter := TModelDAOFilter.Create;
 end;
 
 procedure TModelDAOBase<T>.Delete;
@@ -86,7 +90,13 @@ begin
   FQuery.Free;
   FList.Free;
   FModelConnection.Free;
+  FFilter.Free;
   inherited;
+end;
+
+function TModelDAOBase<T>.Filter: TModelDAOFilter;
+begin
+  Result := FFilter;
 end;
 
 function TModelDAOBase<T>.Get(const InUseList:Boolean): TModelDAOBase<T>;
@@ -134,6 +144,29 @@ begin
   FQuery.SQL.Clear;
   FQuery.SQL.Add(TModelRTTIBind.GetInstance.ClassToSelectPaginationSQL(Entity,AFirst,ASkip));
   FQuery.Open();
+end;
+
+function TModelDAOBase<T>.Get(AFilter: TModelDAOFilter;
+  const InUseList: Boolean): TModelDAOBase<T>;
+begin
+  Result := Self;
+  FQuery.SQL.Clear;
+  FQuery.SQL.Add(TModelRTTIBind.GetInstance.ClassToSelectAllSQL(Entity));
+  FQuery.SQL.Add(AFilter.ResultFilter);
+  FQuery.Open();
+  if InUseList then
+  begin
+    FList.Clear;
+    FQuery.First;
+    while not (FQuery.eof) do
+    begin
+      var LEntity := TClass(T).Create;
+      TEntityBase(LEntity).DataSetToClass(FQuery);
+      FList.Add(LEntity);
+      FQuery.Next;
+    end;
+  end;
+
 end;
 
 function TModelDAOBase<T>.Get(AFilter: string): TModelDAOBase<T>;

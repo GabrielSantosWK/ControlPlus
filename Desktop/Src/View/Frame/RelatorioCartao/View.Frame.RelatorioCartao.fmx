@@ -16,6 +16,24 @@ inherited ViewFrameRelaorioCartao: TViewFrameRelaorioCartao
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
+      object Label1: TLabel
+        Align = Right
+        Position.X = 535.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Valor Total'
+        TabOrder = 1
+      end
+      object lblValorTotal: TLabel
+        Align = Right
+        Position.X = 600.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = '0,00'
+        TabOrder = 0
+      end
     end
     object Layout2: TLayout
       Align = Top
@@ -25,22 +43,35 @@ inherited ViewFrameRelaorioCartao: TViewFrameRelaorioCartao
       TabOrder = 1
       object edtDtInicial: TDateEdit
         Date = 45201.000000000000000000
-        Position.X = 48.000000000000000000
-        Position.Y = 72.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 24.000000000000000000
         TabOrder = 0
       end
       object edtDtFinal: TDateEdit
         Date = 45201.000000000000000000
-        Position.X = 184.000000000000000000
-        Position.Y = 72.000000000000000000
+        Position.X = 152.000000000000000000
+        Position.Y = 24.000000000000000000
         TabOrder = 1
       end
       object Button1: TButton
-        Position.X = 68.000000000000000000
+        Position.X = 20.000000000000000000
         Position.Y = 120.000000000000000000
-        TabOrder = 2
-        Text = 'Button1'
+        Size.Width = 149.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Data Lancamento'
         OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 212.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 109.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Data Vencimento'
+        OnClick = Button2Click
       end
     end
   end

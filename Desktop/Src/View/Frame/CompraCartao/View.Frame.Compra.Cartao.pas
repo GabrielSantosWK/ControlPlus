@@ -9,7 +9,7 @@ uses
   FMX.Objects, FMX.Layouts, View.Componentes.ComboBox.List.Items,
   Model.Static.Cartoes, FMX.Effects, FMX.Edit,
   System.DateUtils,Model.DAO.Lancamentos, Model.Static.Dependentes, Helper.Edit,
-  Model.Utils;
+  Model.Utils, Model.Static.Operacoes;
 
 type
   TViewFrameCompraCartao = class(TViewFrameBase)
@@ -39,6 +39,8 @@ type
     Label1: TLabel;
     ComboBoxDependente: TViewComponenteComboBox;
     ComboBoxListItemsDependente: TViewComponentesComboBoxListItems;
+    ComboBoxOperacao: TViewComponenteComboBox;
+    ComboBoxListItemsOperacao: TViewComponentesComboBoxListItems;
     procedure chbGerarPeriodoClick(Sender: TObject);
     procedure Rectangle4Click(Sender: TObject);
     procedure edtValorKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
@@ -46,6 +48,7 @@ type
   private
     FStaticCartao:TModelStaticCartoes;
     FStaticDependente:TModelStaticDependentes;
+    FStaticOperacao:TModelStaticOperacoes;
     procedure GravarVariosRegistros;
     procedure SaveOneRegister;
     function GetDataDiaVencimento(const ADateVencCard:Integer):TDate;
@@ -75,6 +78,9 @@ begin
   ComboBoxCartao.ListItem := ComboBoxListItemsCartao;
   ComboBoxDependente.ListItem := ComboBoxListItemsDependente;
 
+  FStaticOperacao := TModelStaticOperacoes.GetInstance;
+  ComboBoxOperacao.ListItem := ComboBoxListItemsOperacao;
+
   ComboBoxCartao.Item.Clear;
   for var I := 0 to Pred(FStaticCartao.List.Count) do
     ComboBoxCartao.Item.Add(FStaticCartao.List[i].id,FStaticCartao.List[i].Descricao);
@@ -83,6 +89,9 @@ begin
   for var I := 0 to Pred(FStaticDependente.List.Count) do
     ComboBoxDependente.Item.Add(FStaticDependente.List[i].id,FStaticDependente.List[i].Nome);
 
+  ComboBoxOperacao.Item.Clear;
+  for var I := 0 to Pred(FStaticOperacao.List.Count) do
+    ComboBoxOperacao.Item.Add(FStaticOperacao.List[i].id,FStaticOperacao.List[i].Descricao);
 end;
 
 procedure TViewFrameCompraCartao.BeforeDestruction;
@@ -137,7 +146,7 @@ begin
         var LDia := FStaticCartao.Find(LModelDAOLancamentos.Entity.IdCartao).Vencimento;
         LModelDAOLancamentos.Entity.DataVencimento := StrToDate(LDia.ToString+'/'+LMes.ToString+'/'+LAno.ToString);
         LModelDAOLancamentos.Entity.Valor := edtValor.ToCurrency;
-        LModelDAOLancamentos.Entity.IdOperacao := 'C1F82DF6-F460-46CF-A2B3-E3AE80D641D1';
+        LModelDAOLancamentos.Entity.IdOperacao := ComboBoxOperacao.Key;
         LModelDAOLancamentos.Insert;
       finally
         LModelDAOLancamentos.Free;

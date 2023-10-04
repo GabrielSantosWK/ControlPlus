@@ -125,12 +125,12 @@ begin
   FRequest.Client := FClient;
   FRequest.Response := FResponse;
 
-  URLBase('http://127.0.0.1:8081/v1/');
+  //URLBase('http://127.0.0.1:8081/v1/');
   //URLBase('http://192.168.10.139:8081/v1/');
   //URLBase('http://192.168.1.15:8081/v1/') //Jeferson
   //URLBase('http://192.168.1.36:8081/v1/'); // Tester
   //URLBase('http://192.168.237.70:8081/v1/'); // PC MESA
-  //URLBase('http://192.168.237.64:8081/v1/'); // Notebook
+  URLBase('http://192.168.237.64:8081/v1/'); // Notebook
 end;
 
 function TModelClient.Delete(ABory: String): TJSONObject;

@@ -1,7 +1,10 @@
 unit Model.Static.Operacoes;
 
 interface
-uses Entity.Operacoes, Model.DAO.Operacoes;
+  uses
+  Entity.Operacoes,
+  Model.DAO.Operacoes,
+  System.Generics.Collections;
   type
   TModelStaticOperacoes = class
   private
@@ -14,6 +17,7 @@ uses Entity.Operacoes, Model.DAO.Operacoes;
     destructor Destroy();override;
     procedure Refresh;
     function Find(const AID:string):TEntityOperacoes;
+    function List:TList<TEntityoperacoes>;
   end;
 
 implementation
@@ -50,6 +54,11 @@ begin
   if not Assigned(FInstance) then
     FInstance := TModelStaticOperacoes.Create;
   Result := FInstance;
+end;
+
+function TModelStaticOperacoes.List: TList<TEntityoperacoes>;
+begin
+  Result := FModelDaoOperacoes.List;
 end;
 
 procedure TModelStaticOperacoes.Refresh;

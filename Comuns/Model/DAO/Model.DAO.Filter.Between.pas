@@ -1,38 +1,62 @@
 unit Model.DAO.Filter.Between;
 
 interface
-
-uses Model.DAO.Filter;
+  uses System.SysUtils;
   type
   TBetween = class
-    FParent:TModelDAOFilter;
-    constructor Create(const AParent:TModelDAOFilter);
-    function Value(AValue:string):TBetween;
-    function FirstFilter(const AValue:string):TBetween;
-    function SecondFilter(const AValue:string):TModelDAOFilter;
+  private
+    FFieldDataBase:string;
+    FFirstFilter:string;
+    FSecondFilter:string;
+  public
+    constructor Create();
+    function FieldDataBase(AValue:string):TBetween;
+    function FirstFilter(const AValue:string):TBetween;overload;
+    function FirstFilter(const AValue:TDate):TBetween;overload;
+    procedure SecondFilter(const AValue:string);overload;
+    procedure SecondFilter(const AValue:TDate);overload;
+    function GetResult:string;
   end;
 implementation
 
 { TBetween }
 
-constructor TBetween.Create(const AParent: TModelDAOFilter);
+constructor TBetween.Create();
 begin
-  FParent := AParent;
+
 end;
 
 function TBetween.FirstFilter(const AValue: string): TBetween;
 begin
-
+  Result := Self;
+  FFirstFilter := AValue;
 end;
 
-function TBetween.SecondFilter(const AValue: string): TModelDAOFilter;
+procedure TBetween.SecondFilter(const AValue: TDate);
 begin
-  Result := FParent;
+  FSecondFilter := DateToStr(AValue);
 end;
 
-function TBetween.Value(AValue: string): TBetween;
+procedure TBetween.SecondFilter(const AValue: string);
 begin
+  FSecondFilter := AValue;
+end;
 
+function TBetween.FieldDataBase(AValue: string): TBetween;
+begin
+  Result := Self;
+  FFieldDataBase := AValue;
+end;
+
+function TBetween.FirstFilter(const AValue: TDate): TBetween;
+begin
+  Result := Self;
+  FFirstFilter := DateToStr(AValue);
+end;
+
+function TBetween.GetResult: string;
+begin
+  Result :=  Format(' %s BETWEEN %s and %s ',[FFieldDataBase,QuotedStr(FFirstFilter),QuotedStr(FSecondFilter)]);
 end;
 
 end.

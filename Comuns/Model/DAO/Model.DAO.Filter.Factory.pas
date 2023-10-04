@@ -17,7 +17,7 @@ implementation
 
 function TModelDAOFilterFactory.Between(AParent:TClass): TBetween;
 begin
-  Result := TBetween.Create(AParent);
+  //Result := TBetween.Create(AParent);
 
 end;
 

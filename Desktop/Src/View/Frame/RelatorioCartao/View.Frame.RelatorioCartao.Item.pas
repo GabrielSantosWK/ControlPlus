@@ -17,6 +17,11 @@ type
     ShadowEffect1: TShadowEffect;
     Layout2: TLayout;
     lblCartao: TLabel;
+    Layout3: TLayout;
+    lblDtLancamento: TLabel;
+    Layout4: TLayout;
+    Label1: TLabel;
+    lblDtVencimento: TLabel;
   private
     { Private declarations }
   public
@@ -31,7 +36,10 @@ implementation
 
 procedure TViewFrameRelatorioCartaoItem.SetData(ADataSet: TDataSet);
 begin
-
+  lblDescricao.Text := ADataSet.FieldByName('descricao').AsString;
+  lblValor.Text := CurrToStr(ADataSet.FieldByName('valor').AsCurrency);
+  lblDtLancamento.Text := ADataSet.FieldByName('data_lancamento').AsString;
+  lblDtVencimento.Text := ADataSet.FieldByName('data_vencimento').AsString;
 end;
 
 end.

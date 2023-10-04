@@ -1,9 +1,11 @@
 inherited ViewFrameCompraCartao: TViewFrameCompraCartao
+  Size.Width = 946.000000000000000000
   inherited recFrameBase: TRectangle
+    Size.Width = 946.000000000000000000
     object layControls: TLayout
       Align = MostTop
-      Size.Width = 696.000000000000000000
-      Size.Height = 225.000000000000000000
+      Size.Width = 946.000000000000000000
+      Size.Height = 217.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       object Layout1: TLayout
@@ -12,8 +14,8 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         Padding.Top = 5.000000000000000000
         Padding.Right = 5.000000000000000000
         Padding.Bottom = 5.000000000000000000
-        Position.Y = 175.000000000000000000
-        Size.Width = 696.000000000000000000
+        Position.Y = 167.000000000000000000
+        Size.Width = 946.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -103,19 +105,19 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         end
       end
       object chbGerarPeriodo: TCheckBox
-        Position.X = 8.000000000000000000
-        Position.Y = 90.000000000000000000
+        Position.X = 393.000000000000000000
+        Position.Y = 68.000000000000000000
         TabOrder = 1
         Text = 'Gerar por periodo'
         OnClick = chbGerarPeriodoClick
       end
       object Layout3: TLayout
-        Position.X = 520.000000000000000000
-        Position.Y = 8.000000000000000000
+        Position.X = 219.000000000000000000
+        Position.Y = 91.000000000000000000
         Size.Width = 168.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 9
+        TabOrder = 8
         object Rectangle3: TRectangle
           Align = Client
           Fill.Color = claWhite
@@ -171,12 +173,12 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         end
       end
       object Layout4: TLayout
-        Position.X = 8.000000000000000000
-        Position.Y = 117.000000000000000000
+        Position.X = 393.000000000000000000
+        Position.Y = 91.000000000000000000
         Size.Width = 209.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 10
+        TabOrder = 9
         object Rectangle5: TRectangle
           Align = Client
           Fill.Color = claWhite
@@ -232,8 +234,8 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         end
       end
       object Layout2: TLayout
-        Position.X = 309.000000000000000000
-        Position.Y = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 91.000000000000000000
         Size.Width = 207.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
@@ -292,8 +294,8 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         end
       end
       inline ComboBoxDependente: TViewComponenteComboBox
-        Position.X = 309.000000000000000000
-        Position.Y = 68.000000000000000000
+        Position.X = 313.000000000000000000
+        Position.Y = 8.000000000000000000
         Size.Width = 297.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False
@@ -321,6 +323,36 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
           end
         end
       end
+      inline ComboBoxOperacao: TViewComponenteComboBox
+        Position.X = 618.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        inherited Layout3: TLayout
+          Size.Width = 297.000000000000000000
+          Size.Height = 49.000000000000000000
+          inherited Rectangle3: TRectangle
+            Size.Width = 289.000000000000000000
+            Size.Height = 22.000000000000000000
+            inherited Image1: TImage
+              MultiResBitmap.Height = 1600
+              MultiResBitmap.Width = 1600
+              Position.X = 259.000000000000000000
+              Size.Height = 14.000000000000000000
+            end
+            inherited lblDescricao: TLabel
+              Size.Width = 255.000000000000000000
+              Size.Height = 14.000000000000000000
+            end
+          end
+          inherited Label8: TLabel
+            Size.Width = 293.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            Text = 'Opera'#231#227'o'
+          end
+        end
+      end
     end
   end
   inline ComboBoxListItemsCartao: TViewComponentesComboBoxListItems
@@ -341,6 +373,23 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
     end
   end
   inline ComboBoxListItemsDependente: TViewComponentesComboBoxListItems
+    Align = Contents
+    Size.Width = 567.000000000000000000
+    Size.Height = 551.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    inherited Rectangle1: TRectangle
+      Size.Width = 567.000000000000000000
+      Size.Height = 551.000000000000000000
+    end
+    inherited Rectangle3: TRectangle
+      inherited VertScrollBox1: TVertScrollBox
+        Viewport.Width = 420.000000000000000000
+        Viewport.Height = 280.000000000000000000
+      end
+    end
+  end
+  inline ComboBoxListItemsOperacao: TViewComponentesComboBoxListItems
     Align = Contents
     Size.Width = 567.000000000000000000
     Size.Height = 551.000000000000000000

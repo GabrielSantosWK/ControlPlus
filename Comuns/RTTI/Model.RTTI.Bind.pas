@@ -1241,7 +1241,7 @@ end;
 
 function TModelRTTIBind.ClassToSelectAllSQL(AClass: TObject): String;
 const
-  SQL = 'SELECT * FROM %s tb ;';
+  SQL = 'SELECT * FROM %s tb';
 var
   LTable:string;
 begin
