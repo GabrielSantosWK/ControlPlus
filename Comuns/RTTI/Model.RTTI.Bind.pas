@@ -140,6 +140,7 @@ begin
               LCurrentValue := LCurrentValue.Replace('.','',[rfReplaceAll]).Replace(',','.',[rfReplaceAll]);
               LJsonData.Value := LCurrentValue;
             end;
+            tpFieldBoolen: LJsonData.Value := ObjectToListString(LProperties.GetValue(AClass));
             tpFieldList: LJsonData.Value := ObjectToListString(LProperties.GetValue(AClass));
             tpFieldObject:LJsonData.Value := ObjectToObjectString(LProperties.GetValue(AClass));
             tpFieldTag:LJsonData.Value := ObjectToArrayStrring(LProperties.GetValue(AClass));
@@ -418,6 +419,7 @@ begin
             tpFieldDate:LJsonData.Value := DateToStr(LProperties.GetValue(AClass).AsType<TDate>);
             tpFieldDateTime:LJsonData.Value := DateTimeToStr(LProperties.GetValue(AClass).AsType<TDateTime>);
             tpFieldCurrency:LJsonData.Value := CurrToStr(LProperties.GetValue(AClass).AsCurrency);
+            tpFieldBoolen:LJsonData.Value := BoolToStr(LProperties.GetValue(AClass).AsBoolean);
             tpFieldList: LJsonData.Value := ObjectToListString(LProperties.GetValue(AClass));
             else
             LJsonData.Value := LProperties.GetValue(AClass).AsString;
@@ -437,6 +439,7 @@ begin
             tpFieldDate:LProperties.SetValue(AClass,StrToDate(AJSON.Pairs[LCountForJson].JsonValue.Value));
             tpFieldDateTime:LProperties.SetValue(AClass,StrToDateTime(AJSON.Pairs[LCountForJson].JsonValue.Value));
             tpFieldCurrency:LProperties.SetValue(AClass, StrToCurr(AJSON.Pairs[LCountForJson].JsonValue.Value));
+            tpFieldBoolen:LProperties.SetValue(AClass, StrToBool(AJSON.Pairs[LCountForJson].JsonValue.Value));
             tpFieldList:
             begin
             end;
@@ -539,6 +542,7 @@ begin
      Result := QuotedStr(LDate.Replace('/','-',[rfReplaceAll]));
     end;
     tpFieldCurrency: Result := AFieldValue.Value;
+    tpFieldBoolen: Result :=  (AFieldValue.Value);
     tpFieldList: raise Exception.Create('List not implemented Prepare Vlaue');
   end;
 end;
@@ -590,6 +594,7 @@ begin
               tpFieldDate:LFileValue.Value := DateToStr(LProperties.GetValue(AClass).AsType<TDate>);
               tpFieldDateTime:LFileValue.Value := DateTimeToStr(LProperties.GetValue(AClass).AsType<TDateTime>);
               tpFieldCurrency:LFileValue.Value := CurrToStr(LProperties.GetValue(AClass).AsCurrency);
+              tpFieldBoolen:LFileValue.Value := (LProperties.GetValue(AClass).AsBoolean);
               tpFieldList:
               begin
 
@@ -785,6 +790,7 @@ begin
               tpFieldDateTime:LFileValue.Value := DateTimeToStr(LProperties.GetValue(AClass).AsType<TDateTime>);
               tpFieldTime:LFileValue.Value := TimeToStr(LProperties.GetValue(AClass).AsType<TTime>);
               tpFieldCurrency:LFileValue.Value := CurrToStr(LProperties.GetValue(AClass).AsCurrency);
+              tpFieldBoolen:LFileValue.Value := BoolToStr(LProperties.GetValue(AClass).AsBoolean);
               tpFieldObject:LFileValue.Value := '{}';
               tpFieldTag:LFileValue.Value := '[]';
               tpFieldList:
@@ -1058,6 +1064,7 @@ begin
               tpFieldString:LFileValue.Value := LProperties.GetValue(AClass).AsString;
               tpFieldDate:LFileValue.Value := DateToStr(LProperties.GetValue(AClass).AsType<TDate>);
               tpFieldDateTime:LFileValue.Value := DateTimeToStr(LProperties.GetValue(AClass).AsType<TDateTime>);
+              tpFieldBoolen:LFileValue.Value := (LProperties.GetValue(AClass).AsBoolean);
               tpFieldCurrency:
               begin
                 LFileValue.Value := EmptyStr;
@@ -1371,6 +1378,7 @@ begin
               tpFieldDate:LProperties.SetValue(AClass,StrToDate(LFileValue.Value));
               tpFieldDateTime:LProperties.SetValue(AClass,StrToDateTime(LFileValue.Value));
               tpFieldCurrency:LProperties.SetValue(AClass,Double(LFileValue.Value));
+              tpFieldBoolen:LProperties.SetValue(AClass,Boolean(LFileValue.Value));
               tpFieldList:
               begin
               end;

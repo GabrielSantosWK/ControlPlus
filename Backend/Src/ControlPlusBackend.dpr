@@ -19,7 +19,10 @@ uses
   Model.DAO.Cartoes in '..\..\Comuns\Model\DAO\Model.DAO.Cartoes.pas',
   Model.DAO.Lancamentos in '..\..\Comuns\Model\DAO\Model.DAO.Lancamentos.pas',
   Model.RTTI.Attributes in '..\..\Comuns\RTTI\Model.RTTI.Attributes.pas',
-  Model.RTTI.Bind in '..\..\Comuns\RTTI\Model.RTTI.Bind.pas';
+  Model.RTTI.Bind in '..\..\Comuns\RTTI\Model.RTTI.Bind.pas',
+  Model.DAO.Filter in '..\..\Comuns\Model\DAO\Model.DAO.Filter.pas',
+  Model.DAO.Filter.Between in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas',
+  Model.DAO.Filter.Factory in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas';
 
 begin
   THorse.Use(Jhonson());

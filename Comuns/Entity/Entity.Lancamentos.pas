@@ -18,6 +18,7 @@ uses
     FIdDependente: string;
     FCartao: TEntityCartoes;
     FDescricao: string;
+    FContaCasal: Boolean;
     procedure SetDataLancamento(const Value: TDate);
     procedure SetDataVencimento(const Value: TDate);
     procedure SetId(const Value: string);
@@ -27,6 +28,7 @@ uses
     procedure SetValor(const Value: Currency);
     procedure SetCartao(const Value: TEntityCartoes);
     procedure SetDescricao(const Value: string);
+    procedure SetcontaCasal(const Value: Boolean);
   public
 
   constructor Create();
@@ -78,7 +80,10 @@ uses
   [TypeField(tpFieldString)]
   property IdOperacao:string read FIdOperacao write SetIdOperacao;
 
-
+  [FieldDB('conta_casal')]
+  [FieldJSON]
+  [TypeField(tpFieldBoolen)]
+  property ContaCasal:Boolean read FContaCasal write SetContaCasal;
   end;
 implementation
 
@@ -98,6 +103,11 @@ end;
 procedure TEntityLancamentos.SetCartao(const Value: TEntityCartoes);
 begin
   FCartao := Value;
+end;
+
+procedure TEntityLancamentos.SetContaCasal(const Value: Boolean);
+begin
+  FcontaCasal := Value;
 end;
 
 procedure TEntityLancamentos.SetDataLancamento(const Value: TDate);

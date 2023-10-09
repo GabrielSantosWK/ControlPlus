@@ -41,6 +41,8 @@ type
     ComboBoxListItemsDependente: TViewComponentesComboBoxListItems;
     ComboBoxOperacao: TViewComponenteComboBox;
     ComboBoxListItemsOperacao: TViewComponentesComboBoxListItems;
+    CheckBoxCasal: TCheckBox;
+    layComboBox: TLayout;
     procedure chbGerarPeriodoClick(Sender: TObject);
     procedure Rectangle4Click(Sender: TObject);
     procedure edtValorKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
@@ -147,6 +149,7 @@ begin
         LModelDAOLancamentos.Entity.DataVencimento := StrToDate(LDia.ToString+'/'+LMes.ToString+'/'+LAno.ToString);
         LModelDAOLancamentos.Entity.Valor := edtValor.ToCurrency;
         LModelDAOLancamentos.Entity.IdOperacao := ComboBoxOperacao.Key;
+        LModelDAOLancamentos.Entity.ContaCasal := CheckBoxCasal.IsChecked;
         LModelDAOLancamentos.Insert;
       finally
         LModelDAOLancamentos.Free;
@@ -182,6 +185,7 @@ begin
     LModelDAOLancamentos.Entity.DataVencimento := GetDataDiaVencimento(LDia);
     LModelDAOLancamentos.Entity.Valor := edtValor.ToCurrency;
     LModelDAOLancamentos.Entity.IdOperacao := 'C1F82DF6-F460-46CF-A2B3-E3AE80D641D1';
+    LModelDAOLancamentos.Entity.ContaCasal := CheckBoxCasal.IsChecked;
     LModelDAOLancamentos.Insert;
   finally
     LModelDAOLancamentos.Free;

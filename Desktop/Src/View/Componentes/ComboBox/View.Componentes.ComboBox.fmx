@@ -1,12 +1,12 @@
 object ViewComponenteComboBox: TViewComponenteComboBox
-  Size.Width = 613.000000000000000000
-  Size.Height = 63.000000000000000000
+  Size.Width = 612.000000000000000000
+  Size.Height = 64.000000000000000000
   Size.PlatformDefault = False
   object Layout3: TLayout
     Align = Contents
     Locked = True
-    Size.Width = 613.000000000000000000
-    Size.Height = 63.000000000000000000
+    Size.Width = 612.000000000000000000
+    Size.Height = 64.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 9
     object Rectangle3: TRectangle
@@ -21,8 +21,8 @@ object ViewComponenteComboBox: TViewComponenteComboBox
       Margins.Left = 4.000000000000000000
       Margins.Right = 4.000000000000000000
       Margins.Bottom = 4.000000000000000000
-      Size.Width = 605.000000000000000000
-      Size.Height = 36.000000000000000000
+      Size.Width = 604.000000000000000000
+      Size.Height = 37.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = xFFB0B0B0
       XRadius = 6.000000000000000000
@@ -647,10 +647,10 @@ object ViewComponenteComboBox: TViewComponenteComboBox
           end>
         Align = Right
         Locked = True
-        Position.X = 575.000000000000000000
+        Position.X = 574.000000000000000000
         Position.Y = 4.000000000000000000
         Size.Width = 26.000000000000000000
-        Size.Height = 28.000000000000000000
+        Size.Height = 29.000000000000000000
         Size.PlatformDefault = False
         WrapMode = Place
         OnClick = Image1Click
@@ -658,8 +658,8 @@ object ViewComponenteComboBox: TViewComponenteComboBox
       object lblDescricao: TLabel
         Align = Client
         Locked = True
-        Size.Width = 571.000000000000000000
-        Size.Height = 28.000000000000000000
+        Size.Width = 570.000000000000000000
+        Size.Height = 29.000000000000000000
         Size.PlatformDefault = False
         Text = 'Selecione um item'
         TabOrder = 3
@@ -672,7 +672,7 @@ object ViewComponenteComboBox: TViewComponenteComboBox
       Margins.Left = 4.000000000000000000
       Margins.Bottom = 6.000000000000000000
       Position.X = 4.000000000000000000
-      Size.Width = 609.000000000000000000
+      Size.Width = 608.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.StyleExt = {00060000000000000004000000}

@@ -219,6 +219,9 @@
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Lancamentos.pas"/>
         <DCCReference Include="..\..\Comuns\RTTI\Model.RTTI.Attributes.pas"/>
         <DCCReference Include="..\..\Comuns\RTTI\Model.RTTI.Bind.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

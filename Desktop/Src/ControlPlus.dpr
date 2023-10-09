@@ -1,6 +1,11 @@
 program ControlPlus;
 
 uses
+  madExcept,
+  madLinkDisAsm,
+  madListHardware,
+  madListProcesses,
+  madListModules,
   System.StartUpCopy,
   FMX.Forms,
   View.Principal in 'View\View.Principal.pas' {ViewPrincipal},

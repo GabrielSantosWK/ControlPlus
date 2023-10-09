@@ -7,7 +7,7 @@ uses System.RTTI;
 type
   EnumField = (tpFieldInteger, tpFieldString, tpFieldDate, tpFieldDateTime,
     tpFieldTime,
-    tpFieldCurrency, tpFieldList, tpFieldObject, tpFieldTag);
+    tpFieldCurrency, tpFieldList, tpFieldObject, tpFieldTag,tpFieldBoolen);
 
 type
   ListCrud = class(TCustomAttribute)

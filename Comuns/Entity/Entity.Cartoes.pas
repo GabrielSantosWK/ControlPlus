@@ -12,9 +12,13 @@ uses
     FDescricao: string;
     FId: string;
     FVencimento: Integer;
+    FIdBanco: string;
+    Flimite: Currency;
     procedure SetDescricao(const Value: string);
     procedure SetId(const Value: string);
     procedure SetVencimento(const Value: Integer);
+    procedure SetIdBanco(const Value: string);
+    procedure Setlimite(const Value: Currency);
 
   public
   [FieldDB('id')]
@@ -33,6 +37,16 @@ uses
   [TypeField(tpFieldInteger)]
   property Vencimento: Integer read FVencimento write SetVencimento;
 
+  [FieldDB('id_banco')]
+  [FieldJSON]
+  [TypeField(tpFieldString)]
+  property IdBanco:string read FIdBanco write SetIdBanco;
+
+  [FieldDB('limite')]
+  [FieldJSON]
+  [TypeField(tpFieldCurrency)]
+  property limite:Currency read Flimite write Setlimite;
+
   end;
 implementation
 
@@ -46,6 +60,16 @@ end;
 procedure TEntityCartoes.SetId(const Value: string);
 begin
   FId := Value;
+end;
+
+procedure TEntityCartoes.SetIdBanco(const Value: string);
+begin
+  FIdBanco := Value;
+end;
+
+procedure TEntityCartoes.Setlimite(const Value: Currency);
+begin
+  Flimite := Value;
 end;
 
 procedure TEntityCartoes.SetVencimento(const Value: Integer);

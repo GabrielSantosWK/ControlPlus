@@ -74,40 +74,10 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
           end
         end
       end
-      inline ComboBoxCartao: TViewComponenteComboBox
-        Position.X = 8.000000000000000000
-        Position.Y = 8.000000000000000000
-        Size.Width = 297.000000000000000000
-        Size.Height = 49.000000000000000000
-        Size.PlatformDefault = False
-        inherited Layout3: TLayout
-          Size.Width = 297.000000000000000000
-          Size.Height = 49.000000000000000000
-          inherited Rectangle3: TRectangle
-            Size.Width = 289.000000000000000000
-            Size.Height = 22.000000000000000000
-            inherited Image1: TImage
-              MultiResBitmap.Height = 1600
-              MultiResBitmap.Width = 1600
-              Position.X = 259.000000000000000000
-              Size.Height = 14.000000000000000000
-            end
-            inherited lblDescricao: TLabel
-              Size.Width = 255.000000000000000000
-              Size.Height = 14.000000000000000000
-            end
-          end
-          inherited Label8: TLabel
-            Size.Width = 293.000000000000000000
-            TextSettings.Font.StyleExt = {00060000000000000004000000}
-            Text = 'Cart'#227'o'
-          end
-        end
-      end
       object chbGerarPeriodo: TCheckBox
         Position.X = 393.000000000000000000
         Position.Y = 68.000000000000000000
-        TabOrder = 1
+        TabOrder = 2
         Text = 'Gerar por periodo'
         OnClick = chbGerarPeriodoClick
       end
@@ -239,7 +209,7 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         Size.Width = 207.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 11
+        TabOrder = 12
         object Rectangle2: TRectangle
           Align = Client
           Fill.Color = claWhite
@@ -293,63 +263,105 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
           TabOrder = 12
         end
       end
-      inline ComboBoxDependente: TViewComponenteComboBox
-        Position.X = 313.000000000000000000
-        Position.Y = 8.000000000000000000
-        Size.Width = 297.000000000000000000
-        Size.Height = 49.000000000000000000
+      object CheckBoxCasal: TCheckBox
+        Position.X = 795.000000000000000000
+        Position.Y = 84.000000000000000000
+        TabOrder = 1
+        Text = 'Conta do Casal'
+      end
+      object layComboBox: TLayout
+        Align = Top
+        Size.Width = 946.000000000000000000
+        Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        inherited Layout3: TLayout
+        TabOrder = 13
+        inline ComboBoxCartao: TViewComponenteComboBox
+          Align = Left
           Size.Width = 297.000000000000000000
-          Size.Height = 49.000000000000000000
-          inherited Rectangle3: TRectangle
-            Size.Width = 289.000000000000000000
-            Size.Height = 22.000000000000000000
-            inherited Image1: TImage
-              MultiResBitmap.Height = 1600
-              MultiResBitmap.Width = 1600
-              Position.X = 259.000000000000000000
-              Size.Height = 14.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          inherited Layout3: TLayout
+            Size.Width = 297.000000000000000000
+            Size.Height = 50.000000000000000000
+            inherited Rectangle3: TRectangle
+              Size.Width = 289.000000000000000000
+              Size.Height = 23.000000000000000000
+              inherited Image1: TImage
+                MultiResBitmap.Height = 1600
+                MultiResBitmap.Width = 1600
+                Position.X = 259.000000000000000000
+                Size.Height = 15.000000000000000000
+              end
+              inherited lblDescricao: TLabel
+                Size.Width = 255.000000000000000000
+                Size.Height = 15.000000000000000000
+              end
             end
-            inherited lblDescricao: TLabel
-              Size.Width = 255.000000000000000000
-              Size.Height = 14.000000000000000000
+            inherited Label8: TLabel
+              Size.Width = 293.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              Text = 'Cart'#227'o'
             end
-          end
-          inherited Label8: TLabel
-            Size.Width = 293.000000000000000000
-            TextSettings.Font.StyleExt = {00060000000000000004000000}
-            Text = 'Dependentes'
           end
         end
-      end
-      inline ComboBoxOperacao: TViewComponenteComboBox
-        Position.X = 618.000000000000000000
-        Position.Y = 8.000000000000000000
-        Size.Width = 297.000000000000000000
-        Size.Height = 49.000000000000000000
-        Size.PlatformDefault = False
-        inherited Layout3: TLayout
+        inline ComboBoxDependente: TViewComponenteComboBox
+          Align = Left
+          Position.X = 297.000000000000000000
           Size.Width = 297.000000000000000000
-          Size.Height = 49.000000000000000000
-          inherited Rectangle3: TRectangle
-            Size.Width = 289.000000000000000000
-            Size.Height = 22.000000000000000000
-            inherited Image1: TImage
-              MultiResBitmap.Height = 1600
-              MultiResBitmap.Width = 1600
-              Position.X = 259.000000000000000000
-              Size.Height = 14.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          inherited Layout3: TLayout
+            Size.Width = 297.000000000000000000
+            Size.Height = 50.000000000000000000
+            inherited Rectangle3: TRectangle
+              Size.Width = 289.000000000000000000
+              Size.Height = 23.000000000000000000
+              inherited Image1: TImage
+                MultiResBitmap.Height = 1600
+                MultiResBitmap.Width = 1600
+                Position.X = 259.000000000000000000
+                Size.Height = 15.000000000000000000
+              end
+              inherited lblDescricao: TLabel
+                Size.Width = 255.000000000000000000
+                Size.Height = 15.000000000000000000
+              end
             end
-            inherited lblDescricao: TLabel
-              Size.Width = 255.000000000000000000
-              Size.Height = 14.000000000000000000
+            inherited Label8: TLabel
+              Size.Width = 293.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              Text = 'Dependentes'
             end
           end
-          inherited Label8: TLabel
-            Size.Width = 293.000000000000000000
-            TextSettings.Font.StyleExt = {00060000000000000004000000}
-            Text = 'Opera'#231#227'o'
+        end
+        inline ComboBoxOperacao: TViewComponenteComboBox
+          Align = Left
+          Position.X = 594.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          inherited Layout3: TLayout
+            Size.Width = 297.000000000000000000
+            Size.Height = 50.000000000000000000
+            inherited Rectangle3: TRectangle
+              Size.Width = 289.000000000000000000
+              Size.Height = 23.000000000000000000
+              inherited Image1: TImage
+                MultiResBitmap.Height = 1600
+                MultiResBitmap.Width = 1600
+                Position.X = 259.000000000000000000
+                Size.Height = 15.000000000000000000
+              end
+              inherited lblDescricao: TLabel
+                Size.Width = 255.000000000000000000
+                Size.Height = 15.000000000000000000
+              end
+            end
+            inherited Label8: TLabel
+              Size.Width = 293.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              Text = 'Opera'#231#227'o'
+            end
           end
         end
       end
