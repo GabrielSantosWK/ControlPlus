@@ -43,6 +43,7 @@ type
     ComboBoxListItemsOperacao: TViewComponentesComboBoxListItems;
     CheckBoxCasal: TCheckBox;
     layComboBox: TLayout;
+    CheckBoxProximoMes: TCheckBox;
     procedure chbGerarPeriodoClick(Sender: TObject);
     procedure Rectangle4Click(Sender: TObject);
     procedure edtValorKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
@@ -127,6 +128,16 @@ begin
   var LAno:Integer;
   LMes := MonthOf(Now);
   LAno := YearOf(Now);
+  if CheckBoxProximoMes.IsChecked then
+  begin
+    if LMes = 12 then
+    begin
+      LMes := 1;
+      Inc(LAno);
+    end
+    else
+      Inc(LMes);
+  end;
   Result := StrToDate(ADateVencCard.ToString+'/'+LMes.ToString+'/'+LAno.ToString);
 end;
 
@@ -137,6 +148,16 @@ begin
     var LQuantidadeMesses := StrToIntDef(edtQuantidadeMeses.Text,0);
     var LMes := MonthOf(Now);
     var LAno := YearOf(Now);
+    if CheckBoxProximoMes.IsChecked then
+    begin
+      if LMes = 12 then
+      begin
+        LMes := 1;
+        Inc(LAno);
+      end
+      else
+        Inc(LMes);
+    end;
     for var i := 1 to LQuantidadeMesses do
     begin
       var LModelDAOLancamentos := TModelDAOLancamentos.Create;

@@ -73,6 +73,12 @@ inherited ViewFrameRelaorioCartao: TViewFrameRelaorioCartao
         Text = 'Data Vencimento'
         OnClick = Button2Click
       end
+      object CheckBoxCasal: TCheckBox
+        Position.X = 384.000000000000000000
+        Position.Y = 48.000000000000000000
+        TabOrder = 4
+        Text = 'Contas do Casal'
+      end
     end
   end
 end

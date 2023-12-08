@@ -45,7 +45,8 @@ uses
   View.Frame.RelatorioCartao.Item in 'View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.Item.pas' {ViewFrameRelatorioCartaoItem: TFrame},
   Model.DAO.Filter in '..\..\Comuns\Model\DAO\Model.DAO.Filter.pas',
   Model.DAO.Filter.Factory in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas',
-  Model.DAO.Filter.Between in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas';
+  Model.DAO.Filter.Between in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas',
+  Model.DAO.Filter.Equals in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Equals.pas';
 
 {$R *.res}
 

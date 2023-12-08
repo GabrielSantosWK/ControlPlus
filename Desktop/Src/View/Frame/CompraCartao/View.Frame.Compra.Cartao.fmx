@@ -1,10 +1,12 @@
 inherited ViewFrameCompraCartao: TViewFrameCompraCartao
-  Size.Width = 946.000000000000000000
+  Size.Width = 904.000000000000000000
+  Size.Height = 562.000000000000000000
   inherited recFrameBase: TRectangle
-    Size.Width = 946.000000000000000000
+    Size.Width = 904.000000000000000000
+    Size.Height = 562.000000000000000000
     object layControls: TLayout
       Align = MostTop
-      Size.Width = 946.000000000000000000
+      Size.Width = 904.000000000000000000
       Size.Height = 217.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -15,7 +17,7 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         Padding.Right = 5.000000000000000000
         Padding.Bottom = 5.000000000000000000
         Position.Y = 167.000000000000000000
-        Size.Width = 946.000000000000000000
+        Size.Width = 904.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -77,7 +79,7 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
       object chbGerarPeriodo: TCheckBox
         Position.X = 393.000000000000000000
         Position.Y = 68.000000000000000000
-        TabOrder = 2
+        TabOrder = 3
         Text = 'Gerar por periodo'
         OnClick = chbGerarPeriodoClick
       end
@@ -148,7 +150,7 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         Size.Width = 209.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 9
+        TabOrder = 10
         object Rectangle5: TRectangle
           Align = Client
           Fill.Color = claWhite
@@ -264,17 +266,17 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         end
       end
       object CheckBoxCasal: TCheckBox
-        Position.X = 795.000000000000000000
+        Position.X = 723.000000000000000000
         Position.Y = 84.000000000000000000
-        TabOrder = 1
+        TabOrder = 2
         Text = 'Conta do Casal'
       end
       object layComboBox: TLayout
         Align = Top
-        Size.Width = 946.000000000000000000
+        Size.Width = 904.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 13
+        TabOrder = 14
         inline ComboBoxCartao: TViewComponenteComboBox
           Align = Left
           Size.Width = 297.000000000000000000
@@ -364,6 +366,15 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
             end
           end
         end
+      end
+      object CheckBoxProximoMes: TCheckBox
+        Position.X = 723.000000000000000000
+        Position.Y = 111.000000000000000000
+        Size.Width = 173.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Lan'#231'ar para o proximo m'#234's'
       end
     end
   end

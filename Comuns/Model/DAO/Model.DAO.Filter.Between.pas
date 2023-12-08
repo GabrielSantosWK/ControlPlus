@@ -56,7 +56,9 @@ end;
 
 function TBetween.GetResult: string;
 begin
-  Result :=  Format(' %s BETWEEN %s and %s ',[FFieldDataBase,QuotedStr(FFirstFilter),QuotedStr(FSecondFilter)]);
+  Result :=EmptyStr;
+  if not (FFieldDataBase.IsEmpty and FFirstFilter.IsEmpty and FSecondFilter.IsEmpty) then
+    Result :=  Format('AND %s BETWEEN %s and %s ',[FFieldDataBase,QuotedStr(FFirstFilter),QuotedStr(FSecondFilter)]);
 end;
 
 end.

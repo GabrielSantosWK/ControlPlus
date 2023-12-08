@@ -376,6 +376,7 @@
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.pas"/>
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas"/>
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Equals.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -419,7 +420,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="Bin\Exe\ControlPlus.exe" Configuration="Debug" Class="ProjectOutput"/>
-                <DeployFile LocalName="Bin\Exe\ControlPlus.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="Bin\Exe\ControlPlus.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>ControlPlus.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Win64\Debug\ControlPlus.exe" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="iOSSimulator">

@@ -20,6 +20,7 @@ type
     Button2: TButton;
     Label1: TLabel;
     lblValorTotal: TLabel;
+    CheckBoxCasal: TCheckBox;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
@@ -44,6 +45,11 @@ begin
                        .FieldDataBase(AField)
                        .FirstFilter(edtDtInicial.Date)
                        .SecondFilter(edtDtFinal.Date);
+
+    LModelDAOLancamento.Filter.Equals
+                       .FieldDataBase('conta_casal')
+                       .Value(CheckBoxCasal.IsChecked);
+
     LModelDAOLancamento.Get(LModelDAOLancamento.Filter);
     LModelDAOLancamento.ListDataSet.First;
     var LValorTotal:Currency := 0;
