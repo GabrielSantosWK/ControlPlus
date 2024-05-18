@@ -46,7 +46,8 @@ uses
   Model.DAO.Filter in '..\..\Comuns\Model\DAO\Model.DAO.Filter.pas',
   Model.DAO.Filter.Factory in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas',
   Model.DAO.Filter.Between in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas',
-  Model.DAO.Filter.Equals in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Equals.pas';
+  Model.DAO.Filter.Equals in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Equals.pas',
+  Model.DAO.Filter.Sort in '..\..\Comuns\Model\DAO\Model.DAO.Filter.Sort.pas';
 
 {$R *.res}
 

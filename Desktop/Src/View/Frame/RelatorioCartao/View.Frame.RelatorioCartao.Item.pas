@@ -39,7 +39,7 @@ begin
   lblDescricao.Text := ADataSet.FieldByName('descricao').AsString;
   lblValor.Text := CurrToStr(ADataSet.FieldByName('valor').AsCurrency);
   lblDtLancamento.Text := ADataSet.FieldByName('data_lancamento').AsString;
-  lblDtVencimento.Text := ADataSet.FieldByName('data_vencimento').AsString;
+  lblDtVencimento.Text := FormatDateTime('dd/mmmm/yyyy',ADataSet.FieldByName('data_vencimento').AsDateTime);
 end;
 
 end.

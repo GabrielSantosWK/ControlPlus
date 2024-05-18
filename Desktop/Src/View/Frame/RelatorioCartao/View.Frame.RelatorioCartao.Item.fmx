@@ -49,7 +49,7 @@ object ViewFrameRelatorioCartaoItem: TViewFrameRelatorioCartaoItem
       Align = Client
       StyledSettings = [Family, Size, Style]
       Margins.Left = 10.000000000000000000
-      Size.Width = 326.000000000000000000
+      Size.Width = 270.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TextSettings.FontColor = xFF626262
@@ -65,14 +65,14 @@ object ViewFrameRelatorioCartaoItem: TViewFrameRelatorioCartaoItem
     end
     object Layout2: TLayout
       Align = Right
-      Position.X = 336.000000000000000000
-      Size.Width = 151.000000000000000000
+      Position.X = 280.000000000000000000
+      Size.Width = 207.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
       object Layout3: TLayout
         Align = Top
-        Size.Width = 151.000000000000000000
+        Size.Width = 207.000000000000000000
         Size.Height = 17.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
@@ -89,13 +89,15 @@ object ViewFrameRelatorioCartaoItem: TViewFrameRelatorioCartaoItem
         end
         object lblDtLancamento: TLabel
           Align = Left
+          AutoSize = True
           StyledSettings = [Family, Style]
           Position.X = 65.000000000000000000
-          Size.Width = 73.000000000000000000
+          Size.Width = 25.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 9.000000000000000000
           TextSettings.FontColor = xFF626262
+          TextSettings.WordWrap = False
           Text = 'CAIXA'
           TabOrder = 1
         end
@@ -103,7 +105,7 @@ object ViewFrameRelatorioCartaoItem: TViewFrameRelatorioCartaoItem
       object Layout4: TLayout
         Align = Top
         Position.Y = 17.000000000000000000
-        Size.Width = 151.000000000000000000
+        Size.Width = 207.000000000000000000
         Size.Height = 17.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -120,13 +122,15 @@ object ViewFrameRelatorioCartaoItem: TViewFrameRelatorioCartaoItem
         end
         object lblDtVencimento: TLabel
           Align = Left
+          AutoSize = True
           StyledSettings = [Family, Style]
           Position.X = 65.000000000000000000
-          Size.Width = 73.000000000000000000
+          Size.Width = 25.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 9.000000000000000000
           TextSettings.FontColor = xFF626262
+          TextSettings.WordWrap = False
           Text = 'CAIXA'
           TabOrder = 1
         end

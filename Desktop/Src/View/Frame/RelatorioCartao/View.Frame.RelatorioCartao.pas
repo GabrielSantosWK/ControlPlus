@@ -25,8 +25,10 @@ type
     procedure Button2Click(Sender: TObject);
   private
     procedure BuscarLancamento(const AField:string);
-  public
-    { Public declarations }
+   protected
+    procedure Loaded; override;
+   public
+
   end;
 
 var
@@ -50,6 +52,9 @@ begin
                        .FieldDataBase('conta_casal')
                        .Value(CheckBoxCasal.IsChecked);
 
+    LModelDAOLancamento.Filter.Sort
+                       .FieldDataBase('data_vencimento');
+
     LModelDAOLancamento.Get(LModelDAOLancamento.Filter);
     LModelDAOLancamento.ListDataSet.First;
     var LValorTotal:Currency := 0;
@@ -57,6 +62,8 @@ begin
     begin
       var LItem := TViewFrameRelatorioCartaoItem.Create(nil);
       LItem.Parent := VertScrollBox1;
+      LItem.Align := TAlignLayout.Bottom;
+      LItem.Align := TAlignLayout.MostTop;
       LItem.SetData(LModelDAOLancamento.ListDataSet);
       LValorTotal := LValorTotal + LModelDAOLancamento.ListDataSet.FieldByName('valor').AsCurrency;
       LModelDAOLancamento.ListDataSet.Next;
@@ -75,6 +82,13 @@ end;
 procedure TViewFrameRelaorioCartao.Button2Click(Sender: TObject);
 begin
   BuscarLancamento('data_vencimento');
+end;
+
+procedure TViewFrameRelaorioCartao.Loaded;
+begin
+  inherited;
+  edtDtInicial.Date := Now;
+  edtDtFinal.Date := Now;
 end;
 
 end.

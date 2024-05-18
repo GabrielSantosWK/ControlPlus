@@ -44,6 +44,7 @@ type
     CheckBoxCasal: TCheckBox;
     layComboBox: TLayout;
     CheckBoxProximoMes: TCheckBox;
+    Label2: TLabel;
     procedure chbGerarPeriodoClick(Sender: TObject);
     procedure Rectangle4Click(Sender: TObject);
     procedure edtValorKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;

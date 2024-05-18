@@ -30,6 +30,7 @@ object ViewPrincipal: TViewPrincipal
       Size.PlatformDefault = False
       TabOrder = 3
       Text = 'Lancamentos Cart'#227'o'
+      TextSettings.Trimming = None
       OnClick = Button3Click
     end
     object Button1: TButton
@@ -40,6 +41,7 @@ object ViewPrincipal: TViewPrincipal
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Lancamentos'
+      TextSettings.Trimming = None
       OnClick = Button1Click
     end
     object Button2: TButton
@@ -49,7 +51,8 @@ object ViewPrincipal: TViewPrincipal
       Size.Height = 39.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      Text = 'Lancamentos Cart'#227'o'
+      Text = 'Relatorios Cart'#227'o'
+      TextSettings.Trimming = None
       OnClick = Button2Click
     end
   end
@@ -74,6 +77,7 @@ object ViewPrincipal: TViewPrincipal
         TextSettings.Font.StyleExt = {00070000000000000004000000}
         TextSettings.FontColor = claSlategray
         TextSettings.HorzAlign = Center
+        TextSettings.Trimming = None
         Text = 'Ger'#234'nciamento de Contas'
         TabOrder = 0
         OnClick = Label1Click

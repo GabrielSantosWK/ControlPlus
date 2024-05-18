@@ -222,6 +222,8 @@
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.pas"/>
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Between.pas"/>
         <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Equals.pas"/>
+        <DCCReference Include="..\..\Comuns\Model\DAO\Model.DAO.Filter.Sort.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

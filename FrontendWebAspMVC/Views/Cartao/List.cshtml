@@ -1,0 +1,20 @@
+﻿@model IEnumerable<FrontendWebAspMVC.Models.Entities.Cartoes>
+
+    <ul class="list-group">
+    @foreach (var item in Model)
+    {
+
+        <li class="list-group-item" data-itemid="@item.Id" onclick="AlertJs(this)">@item.Descricao </li>
+    }
+    </ul>
+    <script>
+
+        function AlertJs(element) {
+
+        var url = "@Url.Action("Index", "Cartao")"+ "?id=" + element.getAttribute("data-itemid");
+
+            // Navegue para a URL construída
+            window.location.href = url;
+            //alert("Click "+element.getAttribute("data-itemid"));
+        }
+    </script>

@@ -30,12 +30,12 @@
     <Transaction>2023/09/14 00:58:37.000.208,=C:\Projetos\ControlPlus\Src\Unit2.pas</Transaction>
     <Transaction>2023/09/14 00:58:58.000.846,C:\Projetos\ControlPlus\Src\Unit2.fmx=C:\Projetos\ControlPlus\Src\View\Frame\View.Frame.Lancamentos.fmx</Transaction>
     <Transaction>2023/09/14 00:58:58.000.846,C:\Projetos\ControlPlus\Src\Unit2.pas=C:\Projetos\ControlPlus\Src\View\Frame\View.Frame.Lancamentos.pas</Transaction>
-    <Transaction>2023/09/14 20:58:32.000.532,=C:\Projetos\ControlPlus\Comuns\Entity\Entity.Base.pas</Transaction>
     <Transaction>2023/09/14 20:58:32.000.623,=C:\Projetos\ControlPlus\Comuns\Entity\Entity.Lancamentos.pas</Transaction>
     <Transaction>2023/09/14 20:58:32.000.590,=C:\Projetos\ControlPlus\Comuns\Entity\Entity.Cartoes.pas</Transaction>
+    <Transaction>2023/09/14 20:58:32.000.532,=C:\Projetos\ControlPlus\Comuns\Entity\Entity.Base.pas</Transaction>
+    <Transaction>2023/09/14 20:58:42.000.126,=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Cartoes.pas</Transaction>
     <Transaction>2023/09/14 20:58:42.000.167,=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Lancamentos.pas</Transaction>
     <Transaction>2023/09/14 20:58:42.000.026,=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Base.pas</Transaction>
-    <Transaction>2023/09/14 20:58:42.000.126,=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Cartoes.pas</Transaction>
     <Transaction>2023/09/14 20:58:51.000.682,=C:\Projetos\ControlPlus\Comuns\RTTI\Model.RTTI.Attributes.pas</Transaction>
     <Transaction>2023/09/14 20:58:51.000.735,=C:\Projetos\ControlPlus\Comuns\RTTI\Model.RTTI.Bind.pas</Transaction>
     <Transaction>2023/09/15 15:10:27.000.353,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
@@ -73,8 +73,8 @@
     <Transaction>2023/09/15 22:30:47.000.013,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/09/15 22:31:08.000.906,C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Operacoes.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/09/18 21:12:42.000.923,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
-    <Transaction>2023/09/18 21:13:14.000.455,C:\Projetos\ControlPlus\Desktop\Src\Unit1.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Frame\CompraCartao\View.Frame.Compra.Cartao.fmx</Transaction>
     <Transaction>2023/09/18 21:13:14.000.455,C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas=C:\Projetos\ControlPlus\Desktop\Src\View\Frame\CompraCartao\View.Frame.Compra.Cartao.pas</Transaction>
+    <Transaction>2023/09/18 21:13:14.000.455,C:\Projetos\ControlPlus\Desktop\Src\Unit1.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Frame\CompraCartao\View.Frame.Compra.Cartao.fmx</Transaction>
     <Transaction>2023/09/18 21:20:16.000.618,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/09/18 21:23:16.000.943,C:\Projetos\ControlPlus\Desktop\Src\Unit1.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.fmx</Transaction>
     <Transaction>2023/09/18 21:23:16.000.943,C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.pas</Transaction>
@@ -85,32 +85,34 @@
     <Transaction>2023/09/18 21:29:53.000.273,=C:\Projetos\ControlPlus\Desktop\Src\Unit2.pas</Transaction>
     <Transaction>2023/09/18 21:30:14.000.679,C:\Projetos\ControlPlus\Desktop\Src\Unit2.pas=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Itemss.pas</Transaction>
     <Transaction>2023/09/18 21:30:14.000.679,C:\Projetos\ControlPlus\Desktop\Src\Unit2.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Itemss.fmx</Transaction>
-    <Transaction>2023/09/18 21:30:45.000.348,C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Items.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.List.Items.fmx</Transaction>
     <Transaction>2023/09/18 21:30:45.000.348,C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Items.pas=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.List.Items.pas</Transaction>
+    <Transaction>2023/09/18 21:30:45.000.348,C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Items.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.List.Items.fmx</Transaction>
     <Transaction>2023/09/18 21:30:49.000.882,C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Itemss.pas=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Items.pas</Transaction>
     <Transaction>2023/09/18 21:30:49.000.882,C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Itemss.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\ComboBox\View.Componentes.ComboBox.Items.fmx</Transaction>
     <Transaction>2023/09/29 09:17:26.000.854,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
-    <Transaction>2023/09/29 09:19:29.000.195,C:\Projetos\ControlPlus\Desktop\Src\Unit1.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\Toggle\View.Componentes.Toggle.fmx</Transaction>
     <Transaction>2023/09/29 09:19:29.000.195,C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\Toggle\View.Componentes.Toggle.pas</Transaction>
+    <Transaction>2023/09/29 09:19:29.000.195,C:\Projetos\ControlPlus\Desktop\Src\Unit1.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Componentes\Toggle\View.Componentes.Toggle.fmx</Transaction>
     <Transaction>2023/09/29 21:20:11.000.881,=C:\Projetos\ControlPlus\Desktop\Src\Unit2.pas</Transaction>
     <Transaction>2023/09/29 21:20:34.000.660,C:\Projetos\ControlPlus\Desktop\Src\Unit2.fmx=C:\Projetos\ControlPlus\Desktop\Src\View\Frame\CompraCartao\View.Frame.Compra.Cartao.Item.fmx</Transaction>
     <Transaction>2023/09/29 21:20:34.000.660,C:\Projetos\ControlPlus\Desktop\Src\Unit2.pas=C:\Projetos\ControlPlus\Desktop\Src\View\Frame\CompraCartao\View.Frame.Compra.Cartao.Item.pas</Transaction>
     <Transaction>2023/10/02 11:03:34.000.334,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
-    <Transaction>2023/10/02 11:04:18.000.017,C:\Projetos\ControlPlus\Desktop\Src\View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.fmx=C:\Projetos\ControlPlus\Desktop\Src\Unit1.fmx</Transaction>
     <Transaction>2023/10/02 11:04:18.000.017,C:\Projetos\ControlPlus\Desktop\Src\View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
+    <Transaction>2023/10/02 11:04:18.000.017,C:\Projetos\ControlPlus\Desktop\Src\View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.fmx=C:\Projetos\ControlPlus\Desktop\Src\Unit1.fmx</Transaction>
     <Transaction>2023/10/02 11:07:36.000.415,=C:\Projetos\ControlPlus\Desktop\Src\Unit2.pas</Transaction>
-    <Transaction>2023/10/02 11:07:53.000.563,C:\Projetos\ControlPlus\Desktop\Src\View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.Item.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit2.pas</Transaction>
     <Transaction>2023/10/02 11:07:53.000.563,C:\Projetos\ControlPlus\Desktop\Src\View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.Item.fmx=C:\Projetos\ControlPlus\Desktop\Src\Unit2.fmx</Transaction>
+    <Transaction>2023/10/02 11:07:53.000.563,C:\Projetos\ControlPlus\Desktop\Src\View\Frame\RelatorioCartao\View.Frame.RelatorioCartao.Item.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit2.pas</Transaction>
     <Transaction>2023/10/02 11:33:56.000.832,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/10/02 11:34:25.000.096,C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Filter.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/10/02 15:54:57.000.295,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/10/02 15:55:29.000.066,C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Filter.Factory.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/10/02 15:57:16.000.893,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
     <Transaction>2023/10/02 15:57:47.000.332,C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Filter.Between.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
-    <Transaction>2023/10/09 21:44:41.630,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
-    <Transaction>2023/10/09 21:45:18.109,C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Filter.Equals.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
+    <Transaction>2023/10/09 21:44:41.000.630,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
+    <Transaction>2023/10/09 21:45:18.000.109,C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Filter.Equals.pas=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
+    <Transaction>2023/12/08 22:13:35.000.299,=C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas</Transaction>
+    <Transaction>2023/12/08 22:15:09.000.300,C:\Projetos\ControlPlus\Desktop\Src\Unit1.pas=C:\Projetos\ControlPlus\Comuns\Model\DAO\Model.DAO.Filter.Sort.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile Android64="" Android="Gabriel_moto_G_7"/>
+		<NoProfile Android64="" Android=""/>
 	</ActiveMobileDevice>
 </BorlandProject>

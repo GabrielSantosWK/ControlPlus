@@ -1,0 +1,28 @@
+﻿@model IEnumerable<FrontendWebAspMVC.Models.Entities.Lancamento>
+@{
+
+    ViewData["title"] = "List";
+
+}
+
+<h1>Todos os lancamentos</h1>
+
+<ul class="list-group">
+
+    @foreach (var lancamento in Model)
+    {
+        <li class="list-group-item" data-itemid="@lancamento.Id" onclick="AlertJs(this)">@lancamento.Descricao </li>
+
+    }
+</ul>
+<script>
+
+    function AlertJs(element) {
+
+        var url = "@Url.Action("Index", "Lancamento")" + "?id=" + element.getAttribute("data-itemid");
+
+        // Navegue para a URL construída
+        window.location.href = url;
+        //alert("Click "+element.getAttribute("data-itemid"));
+    }
+</script>

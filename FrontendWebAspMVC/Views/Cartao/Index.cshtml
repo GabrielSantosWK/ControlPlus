@@ -1,0 +1,99 @@
+﻿@model FrontendWebAspMVC.ViewModels.CartaoViewModel
+@{
+    Func<string> CartaoId = () => Model.Cartao != null ? Model.Cartao.Id : "-1";
+
+    ViewData["Title"] = "Cartão";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <form method="post" asp-action="CadastrarCartao">
+        <div class="row">
+            <div class="form-floating mb-12 mb-lg-2">
+                <input type="text" class="form-control" id="Id" name="Id" placeholder="Id" style="display: block;">
+            </div>                    
+            
+            <div class="form-floating mb-3 col-md-3">
+                <input type="text" class="form-control" id="floatingDescricao" name="Descricao" placeholder="Descrição">
+                <label for="floatingDescricao">Descrição</label>
+            </div>
+            <div class="form-floating mb-3 col-md-3">
+                <input type="text" class="form-control" id="floatingDescricao" name="Limite" placeholder="Limite">
+                <label for="floatingDescricao">Limite</label>
+            </div>
+            <div class="form-floating mb-3 col-md-3">
+
+                <select class="form-select" id="inputGroupSelectDependente" name="DiaVencimento">
+                    
+                    @for(var idx = 1;idx <=31;idx++)
+                    {
+                        <option value="@idx">@idx</option>
+                    }
+                </select>
+                <label class="" for="inputGroupSelectDependente">Dia de Vencimento</label>
+            </div>
+            <div class="form-floating mb-3 col-md-3">
+
+                <select class="form-select" id="inputGroupSelectDependente" name="BancoId">
+                    
+                    @foreach (var banco in Model.Bancos)
+                    {
+                        <option value="@banco.Id">@banco.Descricao</option>
+                    }
+                </select>
+                <label class="" for="inputGroupSelectDependente">Banco</label>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-primary form-control ">Salvar</button>
+                </div>
+
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary form-control" data-bs-toggle="modal" data-bs-target="#exampleModal"> Deletar</button>
+                </div>
+                
+                <div class="col-md-12 mt-3">
+                    <a type="button" class="btn btn-primary form-control" asp-action="List" asp-controller="Cartao">Listar</a>
+                </div>                                 
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Deseja realmente deletar o registro ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                        <a type="button" class="btn btn-primary" asp-action="DeletarCartao" asp-controller="Cartao" asp-route-id=@CartaoId()> Sim</a>
+                        <!--<button type="button" class="btn btn-primary">Sim</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@{
+   
+    if (@Model.Cartao != null)
+    {
+        <script>
+            console.log(document.getElementsByName("Descricao")[0].value);
+            console.log("@Model.Cartao.Descricao");
+            document.getElementsByName("Id")[0].value = "@Model.Cartao.Id";
+            document.getElementsByName("Descricao")[0].value = "@Model.Cartao.Descricao";
+            document.getElementsByName("Limite")[0].value = @Model.Cartao.Limite;
+            document.getElementsByName("DiaVencimento")[0].value = "@Model.Cartao.DiaVencimento";
+            document.getElementsByName("BancoId")[0].value = "@Model.Cartao.BancoId";
+
+        </script>        
+    }
+}

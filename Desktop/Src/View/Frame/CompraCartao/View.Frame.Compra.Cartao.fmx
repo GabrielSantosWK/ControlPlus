@@ -6,6 +6,7 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
     Size.Height = 562.000000000000000000
     object layControls: TLayout
       Align = MostTop
+      Position.Y = 35.000000000000000000
       Size.Width = 904.000000000000000000
       Size.Height = 217.000000000000000000
       Size.PlatformDefault = False
@@ -376,6 +377,15 @@ inherited ViewFrameCompraCartao: TViewFrameCompraCartao
         TabOrder = 1
         Text = 'Lan'#231'ar para o proximo m'#234's'
       end
+    end
+    object Label2: TLabel
+      Align = MostTop
+      Size.Width = 904.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Compras feita pelo cart'#227'o'
+      TabOrder = 2
     end
   end
   inline ComboBoxListItemsCartao: TViewComponentesComboBoxListItems

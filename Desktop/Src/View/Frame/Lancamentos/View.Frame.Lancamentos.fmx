@@ -54,6 +54,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
           TextSettings.Font.StyleExt = {00060000000000000004000000}
           TextSettings.FontColor = claWhite
           TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
           Text = 'BUSCAR'
           TabOrder = 0
         end
@@ -82,6 +83,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
           TextSettings.Font.StyleExt = {00060000000000000004000000}
           TextSettings.FontColor = claWhite
           TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
           Text = 'SALVAR'
           TabOrder = 0
         end
@@ -119,18 +121,21 @@ inherited ViewFrameLancamento: TViewFrameLancamento
     object Label2: TLabel
       Position.X = 272.000000000000000000
       Position.Y = 15.000000000000000000
+      TextSettings.Trimming = None
       Text = 'Opera'#231#227'o'
       TabOrder = 6
     end
     object Label3: TLabel
       Position.X = 372.000000000000000000
       Position.Y = 15.000000000000000000
+      TextSettings.Trimming = None
       Text = 'Cart'#227'o'
       TabOrder = 5
     end
     object Label4: TLabel
       Position.X = 544.000000000000000000
       Position.Y = 15.000000000000000000
+      TextSettings.Trimming = None
       Text = 'Dependente'
       TabOrder = 4
     end
@@ -190,6 +195,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
         Size.PlatformDefault = False
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = xFF4E4E4E
+        TextSettings.Trimming = None
         Text = 'Descri'#231#227'o'
         TabOrder = 12
       end
@@ -251,6 +257,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
         Size.PlatformDefault = False
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = xFF4E4E4E
+        TextSettings.Trimming = None
         Text = 'Valor'
         TabOrder = 12
       end
@@ -265,6 +272,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
     object Label9: TLabel
       Position.X = 273.000000000000000000
       Position.Y = 87.000000000000000000
+      TextSettings.Trimming = None
       Text = 'Data Vencimento'
       TabOrder = 7
     end
@@ -335,6 +343,7 @@ inherited ViewFrameLancamento: TViewFrameLancamento
         Size.PlatformDefault = False
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = xFF4E4E4E
+        TextSettings.Trimming = None
         Text = 'Quantos Meses'
         TabOrder = 12
       end

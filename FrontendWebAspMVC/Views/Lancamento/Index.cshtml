@@ -1,0 +1,84 @@
+﻿@model FrontendWebAspMVC.ViewModels.LancamentosViewModel
+
+@{
+    ViewData["Title"] = "Lançamentos";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+
+    <form asp-action="CadastrarLancamentos">
+        <div class="row">
+            <div class="form-floating mb-3 col-md-3">
+                <input type="text" class="form-control" id="floatingDescricao" name="descricao" placeholder="Descrição" >
+                <label for="floatingDescricao">Descrição</label>
+            </div>
+
+            <div class="form-floating mb-3 col-md-3">
+
+                <select class="form-select" id="floatingSelectCartao" aria-label="Floating label select example" name="CartaoId">
+                    <option selected>Selecione</option>
+                    @foreach (var cartao in Model.Cartoes)
+                    {
+                        <option value="@cartao.Id">@cartao.Descricao</option>
+                    }
+                </select>
+                <label class="" for="floatingSelectCartao">Cartão</label>
+            </div>
+            
+            <div class="form-floating mb-3 col-md-3">
+
+                <select class="form-select" id="inputGroupSelectOperacao" name="OperacaoId">
+                    <option selected>Selecione</option>
+                    
+                    @foreach (var operacao in Model.Operacoes)
+                    {
+                        <option value="@operacao.Id">@operacao.Descricao</option>
+                    }
+
+                </select>
+                <label class="" for="inputGroupSelectBanco">Operação</label>
+            </div>
+            
+            <div class="form-floating mb-3 col-md-3">
+
+                <select class="form-select" id="inputGroupSelectDependente" name="DependenteId">
+                    <option selected>Selecione</option>
+                    @foreach (var dependente in Model.Dependentes)
+                    {
+                        <option value="@dependente.Id">@dependente.Nome</option>
+                    }
+                </select>
+                <label class="" for="inputGroupSelectDependente">Dependente</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <input type="number" class="form-control" id="floatingPassword" placeholder="Valor">
+                <label for="floatingPassword">Valor</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <input type="number" class="form-control" id="floatingPassword" placeholder="Valor">
+                <label for="floatingPassword">Valor</label>
+            </div>
+
+            <div class="form-floating col-md-3 mb-3">
+                <input type="date" class="form-control" id="floatingDataLancamento" placeholder="Data de Lancamento" name="DataLancamento" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                <label for="floatingPassword">Data Lancamento</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <input type="date" class="form-control" id="floatingPassword" placeholder="Data Vencimento" name="DataVencimento" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                <label for="floatingPassword">Data Vencimento</label>
+            </div>
+            <div class="form-check form-switch col-md-6 mb-3">
+                <input class="form-check-input" type="checkbox"  id="flexSwitchCheckContaCasal" name="ContaCasal">
+                <label class="form-check-label" for="flexSwitchCheckContaCasal">Conta do Casal</label>
+            </div>
+            <button type="submit" class="btn btn-primary col-md-12 form-control mb-lg-5">Salvar</button>
+            <a type="button" class="btn btn-primary col-md-12 form-control" asp-action="Index" asp-controller="Lancamento">Lista</a>
+        </div>
+    </form>
+
+</div>
+<script>
+
+    
+</script>
